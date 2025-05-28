@@ -33,7 +33,7 @@ const Header = () => {
           <div className="flex items-center space-x-2 space-x-reverse">
             <Heart className="w-8 h-8 text-medical-blue medical-icon" />
             <div>
-              <h1 className="text-2xl font-bold text-medical-blue">Trust Care</h1>
+              <h1 className="text-2xl font-bold text-medical-blue">شركة اغابي</h1>
               <p className="text-xs text-gray-600">خدمات التمريض المنزلي</p>
             </div>
           </div>
