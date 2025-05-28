@@ -15,7 +15,7 @@ const WhatsAppFloat = () => {
 
   return (
     <a
-      href="https://wa.me/201099843535"
+      href="https://wa.me/201211112471"
       target="_blank"
       rel="noopener noreferrer"
       className="fixed bottom-4 right-4 sm:bottom-5 sm:right-5 md:bottom-6 md:right-6 w-14 h-14 sm:w-16 sm:h-16 bg-[#25d366] hover:bg-[#20ba5a] text-white rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 z-50 animate-pulse hover:animate-none touch-target"
