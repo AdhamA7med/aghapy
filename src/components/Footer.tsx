@@ -20,7 +20,7 @@ const Footer = () => {
                 <Heart className="w-8 h-8 text-white" />
               </div>
               <div>
-                <h3 className="text-2xl font-bold">Trust Care</h3>
+                <h3 className="text-2xl font-bold">شركة اغابي</h3>
                 <p className="text-gray-300">خدمات التمريض المنزلي</p>
               </div>
             </div>
@@ -134,7 +134,7 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             {/* Copyright */}
             <div className="text-gray-300 text-center md:text-right">
-              <p>&copy; 2024 Trust Care. جميع الحقوق محفوظة</p>
+              <p>&copy; 2025 شركة اغابي. جميع الحقوق محفوظة</p>
             </div>
 
             {/* Developer Credit */}
