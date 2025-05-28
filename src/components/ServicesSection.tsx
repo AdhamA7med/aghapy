@@ -141,10 +141,10 @@ const ServicesSection = () => {
                 className="btn-medical text-white px-8 py-3 rounded-full font-semibold hover-lift flex items-center justify-center gap-2"
               >
                 <Heart className="w-5 h-5" />
-                اتصل الآن: 01099843535
+                اتصل الآن: 01211112471
               </a>
               <a 
-                href="https://wa.me/201099843535"
+                href="https://wa.me/201211112471"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-green-500 hover:bg-green-600 text-white px-8 py-3 rounded-full font-semibold transition-all duration-300 hover-lift flex items-center justify-center gap-2"
