@@ -138,7 +138,7 @@ const WhyUsSection = () => {
             <div className="bg-white rounded-2xl p-8 max-w-2xl mx-auto">
               <div className="text-6xl text-medical-blue/20 mb-4">"</div>
               <p className="text-lg text-gray-700 italic mb-4">
-                خدمة ممتازة وفريق طبي محترف جداً. شعرنا بالأمان والراحة مع Trust Care
+                خدمة ممتازة وفريق طبي محترف جداً. شعرنا بالأمان والراحة مع شركة اغابي
               </p>
               <div className="flex items-center justify-center gap-4">
                 <div className="w-12 h-12 bg-medical-blue rounded-full flex items-center justify-center">
