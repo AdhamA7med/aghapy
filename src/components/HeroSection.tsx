@@ -44,7 +44,7 @@ const HeroSection = () => {
           {/* Main Heading */}
           <h1 className="text-4xl md:text-6xl font-bold text-gray-800 mb-6 leading-tight">
             مرحباً بكم في
-            <span className="text-medical-blue block mt-2">Trust Care</span>
+            <span className="text-medical-blue block mt-2">شركة اغابي</span>
           </h1>
 
           {/* Subtitle */}
