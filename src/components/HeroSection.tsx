@@ -61,11 +61,12 @@ const HeroSection = () => {
               className="btn-medical text-white px-8 py-4 rounded-full text-lg font-semibold flex items-center gap-2 hover-lift"
             >
               <Heart className="w-5 h-5" />
-              احجز استشارة مجانية
+تواصل معنا 
+            
             </button>
             
             <a 
-              href="https://wa.me/201099843535"
+              href="https://wa.me/201211112471"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 hover-lift flex items-center gap-2"
