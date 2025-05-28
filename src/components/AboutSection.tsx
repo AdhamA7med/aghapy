@@ -42,7 +42,7 @@ const AboutSection = () => {
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">من نحن</h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Trust Care هي المؤسسة الرائدة في مجال خدمات التمريض المنزلي والرعاية الطبية المتخصصة في القاهرة
+            شركة اغابي هي المؤسسة الرائدة في مجال خدمات التمريض المنزلي والرعاية الطبية المتخصصة في القاهرة
           </p>
         </div>
 
