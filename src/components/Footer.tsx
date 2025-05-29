@@ -155,7 +155,7 @@ const Footer = () => {
             {/* Quick Contact */}
             <div className="flex items-center gap-4">
               <a 
-                href="tel:01099843535"
+                href="tel:01211112471"
                 className="bg-medical-blue hover:bg-medical-teal text-white p-3 rounded-full transition-all duration-300 hover-lift"
                 title="اتصل الآن"
               >
