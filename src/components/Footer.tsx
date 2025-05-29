@@ -49,7 +49,7 @@ const Footer = () => {
                   rel="noopener noreferrer"
                   className="hover:text-green-400 transition-colors"
                 >
-                  واتساب: 01099843535
+                  واتساب: 01211112471
                 </a>
               </div>
               
