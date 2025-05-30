@@ -1,10 +1,12 @@
 
 import { useState, useEffect } from 'react';
 import { Heart, Menu, X } from 'lucide-react';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,11 +18,22 @@ const Header = () => {
   }, []);
 
   const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-      setIsMenuOpen(false);
+    // If we're not on the home page, navigate to home first
+    if (window.location.pathname !== '/') {
+      navigate('/');
+      setTimeout(() => {
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    } else {
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
     }
+    setIsMenuOpen(false);
   };
 
   return (
@@ -30,16 +43,16 @@ const Header = () => {
       <nav className="container mx-auto px-4 py-4">
         <div className="flex justify-between items-center">
           {/* Logo */}
-          <div className="flex items-center space-x-2 space-x-reverse">
+          <Link to="/" className="flex items-center space-x-2 space-x-reverse">
             <Heart className="w-8 h-8 text-medical-blue medical-icon" />
             <div>
               <h1 className="text-2xl font-bold text-medical-blue">شركة اغابي</h1>
               <p className="text-xs text-gray-600">خدمات التمريض المنزلي</p>
             </div>
-          </div>
+          </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8 space-x-reverse">
+          <div className="hidden md:flex items-center space-x-6 space-x-reverse">
             <button 
               onClick={() => scrollToSection('home')}
               className="text-gray-700 hover:text-medical-blue transition-colors font-medium"
@@ -58,18 +71,18 @@ const Header = () => {
             >
               خدماتنا
             </button>
-            <button 
-              onClick={() => scrollToSection('why-us')}
+            <Link 
+              to="/medical-supplies"
               className="text-gray-700 hover:text-medical-blue transition-colors font-medium"
             >
-              لماذا نحن؟
-            </button>
-            <button 
-              onClick={() => scrollToSection('testimonials')}
+              المستلزمات الطبية
+            </Link>
+            <Link 
+              to="/nursing-jobs"
               className="text-gray-700 hover:text-medical-blue transition-colors font-medium"
             >
-              آراء العملاء
-            </button>
+              التوظيف
+            </Link>
             <button 
               onClick={() => scrollToSection('contact')}
               className="btn-medical text-white px-6 py-2 rounded-full font-medium"
@@ -109,18 +122,20 @@ const Header = () => {
               >
                 خدماتنا
               </button>
-              <button 
-                onClick={() => scrollToSection('why-us')}
+              <Link 
+                to="/medical-supplies"
+                onClick={() => setIsMenuOpen(false)}
                 className="text-gray-700 hover:text-medical-blue transition-colors font-medium text-right px-4"
               >
-                لماذا نحن؟
-              </button>
-              <button 
-                onClick={() => scrollToSection('testimonials')}
+                المستلزمات الطبية
+              </Link>
+              <Link 
+                to="/nursing-jobs"
+                onClick={() => setIsMenuOpen(false)}
                 className="text-gray-700 hover:text-medical-blue transition-colors font-medium text-right px-4"
               >
-                آراء العملاء
-              </button>
+                التوظيف
+              </Link>
               <button 
                 onClick={() => scrollToSection('contact')}
                 className="btn-medical text-white px-6 py-2 rounded-full font-medium mx-4"

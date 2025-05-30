@@ -1,5 +1,5 @@
 
-import { Heart, Stethoscope, Cross } from 'lucide-react';
+import { Heart, Stethoscope, Cross, MapPin } from 'lucide-react';
 import { useEffect, useRef, useState } from 'react';
 
 const ContactSection = () => {
@@ -14,8 +14,8 @@ const ContactSection = () => {
         }
       },
       { 
-        threshold: 0.01,
-        rootMargin: '100px 0px -30px 0px'
+        threshold: 0.1,
+        rootMargin: '0px 0px -10px 0px'
       }
     );
 
@@ -50,7 +50,7 @@ const ContactSection = () => {
           </p>
         </div>
 
-        <div className="contact-grid items-start">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
           {/* Contact Info */}
           <div className={`transition-all duration-1000 delay-200 ${isVisible ? 'slide-in-right visible' : 'slide-in-right'}`}>
             <div className="space-y-6 sm:space-y-8">
@@ -82,7 +82,7 @@ const ContactSection = () => {
                       </a>
                     </div>
                     <a 
-                      href="tel:01099843535"
+                      href="tel:01211112471"
                       className="mobile-button bg-medical-blue text-white hover:bg-medical-teal flex-shrink-0"
                     >
                       اتصل
@@ -113,9 +113,7 @@ const ContactSection = () => {
                   {/* Location */}
                   <div className="flex items-center gap-3 sm:gap-4 p-3 sm:p-4 bg-white rounded-xl sm:rounded-2xl">
                     <div className="w-10 h-10 sm:w-12 sm:h-12 bg-medical-teal/10 rounded-full flex items-center justify-center flex-shrink-0">
-                      <svg className="w-5 h-5 sm:w-6 sm:h-6 text-medical-teal" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-                      </svg>
+                      <MapPin className="w-5 h-5 sm:w-6 sm:h-6 text-medical-teal" />
                     </div>
                     <div className="flex-1 min-w-0">
                       <p className="text-xs sm:text-sm text-gray-600">العنوان</p>
@@ -138,27 +136,27 @@ const ContactSection = () => {
             </div>
           </div>
 
-          {/* Emergency Contact & Services */}
+          {/* Map Section */}
           <div className={`transition-all duration-1000 delay-400 ${isVisible ? 'slide-in-left visible' : 'slide-in-left'}`}>
             <div className="space-y-6 sm:space-y-8">
-              {/* Emergency Contact */}
-              <div className="medical-card responsive-card text-center hover-lift">
-                <div className="flex justify-center mb-4 sm:mb-6">
-                  <div className="bg-red-100 rounded-full p-3 sm:p-4">
-                    <Cross className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 text-red-600 medical-icon pulse-slow" />
-                  </div>
+              {/* Google Map */}
+              <div className="medical-card rounded-2xl p-4 sm:p-6">
+                <h3 className="text-xl sm:text-2xl font-bold text-gray-800 mb-4 text-center flex items-center justify-center gap-2">
+                  <MapPin className="w-6 h-6 text-medical-blue" />
+                  موقعنا على الخريطة
+                </h3>
+                <div className="rounded-xl overflow-hidden shadow-lg">
+                  <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3451.8116098002106!2d31.3437892!3d30.099581299999993!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145815b22e4a7bd1%3A0xc6f8f212f4f2784f!2z2LTYsdmD2Kkg2K7Yr9mF2KfYqiDYqtmF2LHZiti22YrYqSDZgdmKINin2YTZgtin2YfYsdipIHwg2LTYsdmD2Kkg2KfYutin2KjZiiDZhNmE2YXYs9iq2YTYstmF2KfYqiDYp9mE2LfYqNmK2Kkg2YjYp9mE2LHYudin2YrYqSDYp9mE2KrZhdix2YrYttmK2Yc!5e0!3m2!1sar!2seg!4v1748572358611!5m2!1sar!2seg" 
+                    width="100%" 
+                    height="300" 
+                    style={{ border: 0 }} 
+                    allowFullScreen 
+                    loading="lazy" 
+                    referrerPolicy="no-referrer-when-downgrade"
+                    className="w-full h-64 sm:h-80 rounded-lg"
+                  ></iframe>
                 </div>
-                <h3 className="text-xl sm:text-2xl font-bold text-gray-800 mb-3 sm:mb-4">حالات الطوارئ</h3>
-                <p className="text-sm sm:text-base text-gray-600 mb-4 sm:mb-6 leading-relaxed px-2">
-                  في حالات الطوارئ الطبية، اتصل بنا فوراً وسيصل فريقنا في أسرع وقت
-                </p>
-                <a 
-                  href="tel:01211112471"
-                  className="mobile-button bg-red-500 hover:bg-red-600 text-white font-bold text-base sm:text-lg inline-flex mx-auto"
-                >
-                  <Cross className="w-4 h-4 sm:w-5 sm:h-5" />
-                  اتصال طوارئ
-                </a>
               </div>
 
               {/* Quick Services */}

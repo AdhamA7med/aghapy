@@ -8,6 +8,7 @@ import TestimonialsSection from '@/components/TestimonialsSection';
 import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
 import WhatsAppFloat from '@/components/WhatsAppFloat';
+import FloatingPhoneButton from '@/components/FloatingPhoneButton';
 
 const Index = () => {
   return (
@@ -23,6 +24,7 @@ const Index = () => {
       </main>
       <Footer />
       <WhatsAppFloat />
+      <FloatingPhoneButton />
     </div>
   );
 };
