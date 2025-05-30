@@ -14,8 +14,8 @@ const AboutSection = () => {
         }
       },
       { 
-        threshold: 0.1,
-        rootMargin: '0px 0px -10px 0px'
+        threshold: 0.3,
+        rootMargin: '50px 0px -50px 0px'
       }
     );
 
@@ -105,11 +105,11 @@ const AboutSection = () => {
           {/* Right Content */}
           <div className={`transition-all duration-1000 delay-400 ${isVisible ? 'slide-in-left visible' : 'slide-in-left'}`}>
             <div className="relative">
-              {/* Main Image Container - Updated to medical team */}
+              {/* Main Image Container - Complete medical team */}
               <div className="relative rounded-3xl overflow-hidden shadow-2xl hover-lift">
                 <img 
-                  src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=800&q=80"
-                  alt="فريق طبي متخصص"
+                  src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?auto=format&fit=crop&w=800&q=80"
+                  alt="فريق طبي متخصص كامل"
                   className="w-full h-96 object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-medical-blue/20 to-transparent"></div>

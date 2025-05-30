@@ -16,8 +16,8 @@ const MedicalSupplies = () => {
         }
       },
       { 
-        threshold: 0.1,
-        rootMargin: '0px 0px -10px 0px'
+        threshold: 0.3,
+        rootMargin: '50px 0px -50px 0px'
       }
     );
 
@@ -33,32 +33,73 @@ const MedicalSupplies = () => {
   }, []);
 
   const diaperBrands = [
-    'فاين كير', 'دكتور كومفورت', 'ساني', 'فرعونكس', 'جيرماني', 
-    'اوميجا', 'هاي كير', 'ابينا', 'اتيكو'
+    { name: 'فاين كير', image: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&w=300&q=80' },
+    { name: 'دكتور كومفورت', image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?auto=format&fit=crop&w=300&q=80' },
+    { name: 'ساني', image: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=300&q=80' },
+    { name: 'فرعونكس', image: 'https://images.unsplash.com/photo-1559757175-0eb30cd8c063?auto=format&fit=crop&w=300&q=80' },
+    { name: 'جيرماني', image: 'https://images.unsplash.com/photo-1576671081837-49000212a370?auto=format&fit=crop&w=300&q=80' },
+    { name: 'اوميجا', image: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=300&q=80' },
+    { name: 'هاي كير', image: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&w=300&q=80' },
+    { name: 'ابينا', image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?auto=format&fit=crop&w=300&q=80' },
+    { name: 'اتيكو', image: 'https://images.unsplash.com/photo-1559757175-0eb30cd8c063?auto=format&fit=crop&w=300&q=80' }
   ];
 
   const bedSheets = [
-    'ساني', 'اوميجا', 'جيرماني', 'سليبي', 
-    'دكتور كمفورت', 'هاي كير', 'دراي بلس'
+    { name: 'ساني', image: 'https://images.unsplash.com/photo-1631879742974-20dceb92f16e?auto=format&fit=crop&w=300&q=80' },
+    { name: 'اوميجا', image: 'https://images.unsplash.com/photo-1540574163026-643ea20ade25?auto=format&fit=crop&w=300&q=80' },
+    { name: 'جيرماني', image: 'https://images.unsplash.com/photo-1631879742974-20dceb92f16e?auto=format&fit=crop&w=300&q=80' },
+    { name: 'سليبي', image: 'https://images.unsplash.com/photo-1540574163026-643ea20ade25?auto=format&fit=crop&w=300&q=80' },
+    { name: 'دكتور كمفورت', image: 'https://images.unsplash.com/photo-1631879742974-20dceb92f16e?auto=format&fit=crop&w=300&q=80' },
+    { name: 'هاي كير', image: 'https://images.unsplash.com/photo-1540574163026-643ea20ade25?auto=format&fit=crop&w=300&q=80' },
+    { name: 'دراي بلس', image: 'https://images.unsplash.com/photo-1631879742974-20dceb92f16e?auto=format&fit=crop&w=300&q=80' }
   ];
 
   const oxygenDevices = [
-    { name: 'اكسجين صيني', sizes: ['5 لتر', '8 لتر', '10 لتر'] },
-    { name: 'نوفو', sizes: ['5 لتر', '8 لتر', '10 لتر'] }
+    { name: 'اكسجين صيني', sizes: ['5 لتر', '8 لتر', '10 لتر'], image: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&w=300&q=80' },
+    { name: 'نوفو', sizes: ['5 لتر', '8 لتر', '10 لتر'], image: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=300&q=80' }
   ];
 
-  const bipapDevices = ['St30', 'St25', 'اوتو سيباب'];
+  const bipapDevices = [
+    { name: 'St30', image: 'https://images.unsplash.com/photo-1559757175-0eb30cd8c063?auto=format&fit=crop&w=300&q=80' },
+    { name: 'St25', image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?auto=format&fit=crop&w=300&q=80' },
+    { name: 'اوتو سيباب', image: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=300&q=80' }
+  ];
 
   const pressureDevices = [
-    'جرانزيا عادي وديجيتال', 'بيلو ديجيتال', 'يو ويل ديجيتال',
-    'روز ماكس ديجيتال', 'اورثو ديجيتال', 'اكيوريت ديجيتال',
-    'ميدزانيا زئبقي', 'بريما زئبقي'
+    { name: 'جرانزيا عادي وديجيتال', image: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&w=300&q=80' },
+    { name: 'بيلو ديجيتال', image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?auto=format&fit=crop&w=300&q=80' },
+    { name: 'يو ويل ديجيتال', image: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=300&q=80' },
+    { name: 'روز ماكس ديجيتال', image: 'https://images.unsplash.com/photo-1559757175-0eb30cd8c063?auto=format&fit=crop&w=300&q=80' },
+    { name: 'اورثو ديجيتال', image: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&w=300&q=80' },
+    { name: 'اكيوريت ديجيتال', image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?auto=format&fit=crop&w=300&q=80' },
+    { name: 'ميدزانيا زئبقي', image: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=300&q=80' },
+    { name: 'بريما زئبقي', image: 'https://images.unsplash.com/photo-1559757175-0eb30cd8c063?auto=format&fit=crop&w=300&q=80' }
   ];
 
   const sugarDevices = [
-    'رايت تيست', 'كنتور بلاس', 'ثري اتشيك', 'تانجو', 'فاين تيست',
-    'يو ويل', 'كنتور تي اس', 'بايفورما', 'برفكت', 'اكواتشيك انستنت',
-    'ماتش', 'سيليكت بلاس', 'جلوكودكتور', 'وان كول بلس', 'سمارت', 'اكتيف'
+    { name: 'رايت تيست', image: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&w=300&q=80' },
+    { name: 'كنتور بلاس', image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?auto=format&fit=crop&w=300&q=80' },
+    { name: 'ثري اتشيك', image: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=300&q=80' },
+    { name: 'تانجو', image: 'https://images.unsplash.com/photo-1559757175-0eb30cd8c063?auto=format&fit=crop&w=300&q=80' },
+    { name: 'فاين تيست', image: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&w=300&q=80' },
+    { name: 'يو ويل', image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?auto=format&fit=crop&w=300&q=80' },
+    { name: 'كنتور تي اس', image: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=300&q=80' },
+    { name: 'بايفورما', image: 'https://images.unsplash.com/photo-1559757175-0eb30cd8c063?auto=format&fit=crop&w=300&q=80' },
+    { name: 'برفكت', image: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&w=300&q=80' },
+    { name: 'اكواتشيك انستنت', image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?auto=format&fit=crop&w=300&q=80' },
+    { name: 'ماتش', image: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=300&q=80' },
+    { name: 'سيليكت بلس', image: 'https://images.unsplash.com/photo-1559757175-0eb30cd8c063?auto=format&fit=crop&w=300&q=80' },
+    { name: 'جلوكودكتور', image: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&w=300&q=80' },
+    { name: 'وان كول بلس', image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?auto=format&fit=crop&w=300&q=80' },
+    { name: 'سمارت', image: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=300&q=80' },
+    { name: 'اكتيف', image: 'https://images.unsplash.com/photo-1559757175-0eb30cd8c063?auto=format&fit=crop&w=300&q=80' }
+  ];
+
+  const rentalEquipment = [
+    { name: 'كراسي متحركة', image: 'https://images.unsplash.com/photo-1576671081837-49000212a370?auto=format&fit=crop&w=300&q=80' },
+    { name: 'مشايات طبية', image: 'https://images.unsplash.com/photo-1559757175-0eb30cd8c063?auto=format&fit=crop&w=300&q=80' },
+    { name: 'عكاكيز طبية', image: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=300&q=80' },
+    { name: 'سراير طبية', image: 'https://images.unsplash.com/photo-1540574163026-643ea20ade25?auto=format&fit=crop&w=300&q=80' }
   ];
 
   return (
@@ -67,7 +108,7 @@ const MedicalSupplies = () => {
       
       {/* Hero Section */}
       <section className="pt-24 pb-12 bg-gradient-to-br from-medical-blue/10 to-medical-teal/10">
-        <div className="container mx-auto">
+        <div className="container mx-auto px-4">
           <div className="text-center mb-8">
             <div className="flex justify-center mb-6">
               <div className="bg-white rounded-full p-4 shadow-lg">
@@ -104,7 +145,7 @@ const MedicalSupplies = () => {
 
       {/* Sections */}
       <section ref={sectionRef} className="py-16">
-        <div className="container mx-auto">
+        <div className="container mx-auto px-4">
           
           {/* Section 1: Diapers and Bed Sheets */}
           <div className={`mb-16 transition-all duration-1000 ${isVisible ? 'fade-in visible' : 'fade-in'}`}>
@@ -119,13 +160,17 @@ const MedicalSupplies = () => {
                   <Heart className="w-6 h-6" />
                   أنواع الحفاضات
                 </h3>
-                <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
                   {diaperBrands.map((brand, index) => (
                     <div key={index} className="bg-white rounded-lg p-3 text-center shadow-sm hover:shadow-md transition-all">
-                      <div className="w-16 h-16 bg-gray-100 rounded-lg mx-auto mb-2 flex items-center justify-center">
-                        <Package className="w-8 h-8 text-medical-blue" />
+                      <div className="w-20 h-20 bg-gray-100 rounded-lg mx-auto mb-2 overflow-hidden">
+                        <img 
+                          src={brand.image} 
+                          alt={brand.name}
+                          className="w-full h-full object-cover"
+                        />
                       </div>
-                      <p className="text-sm font-medium text-gray-800">{brand}</p>
+                      <p className="text-sm font-medium text-gray-800">{brand.name}</p>
                       <p className="text-xs text-gray-500">جميع المقاسات</p>
                     </div>
                   ))}
@@ -138,13 +183,17 @@ const MedicalSupplies = () => {
                   <Stethoscope className="w-6 h-6" />
                   أنواع المفارش
                 </h3>
-                <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
                   {bedSheets.map((sheet, index) => (
                     <div key={index} className="bg-white rounded-lg p-3 text-center shadow-sm hover:shadow-md transition-all">
-                      <div className="w-16 h-16 bg-gray-100 rounded-lg mx-auto mb-2 flex items-center justify-center">
-                        <Package className="w-8 h-8 text-medical-teal" />
+                      <div className="w-20 h-20 bg-gray-100 rounded-lg mx-auto mb-2 overflow-hidden">
+                        <img 
+                          src={sheet.image} 
+                          alt={sheet.name}
+                          className="w-full h-full object-cover"
+                        />
                       </div>
-                      <p className="text-sm font-medium text-gray-800">{sheet}</p>
+                      <p className="text-sm font-medium text-gray-800">{sheet.name}</p>
                     </div>
                   ))}
                 </div>
@@ -160,12 +209,16 @@ const MedicalSupplies = () => {
             </div>
             
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-              {['كراسي متحركة', 'مشايات طبية', 'عكاكيز طبية', 'سراير طبية'].map((item, index) => (
+              {rentalEquipment.map((item, index) => (
                 <div key={index} className="medical-card rounded-xl p-6 text-center hover-lift">
-                  <div className="w-20 h-20 bg-medical-green/10 rounded-full mx-auto mb-4 flex items-center justify-center">
-                    <Package className="w-10 h-10 text-medical-green" />
+                  <div className="w-24 h-24 bg-gray-100 rounded-lg mx-auto mb-4 overflow-hidden">
+                    <img 
+                      src={item.image} 
+                      alt={item.name}
+                      className="w-full h-full object-cover"
+                    />
                   </div>
-                  <h4 className="text-lg font-bold text-gray-800 mb-2">{item}</h4>
+                  <h4 className="text-lg font-bold text-gray-800 mb-2">{item.name}</h4>
                   <p className="text-sm text-gray-600">متاح للإيجار</p>
                 </div>
               ))}
@@ -183,16 +236,27 @@ const MedicalSupplies = () => {
               {/* Oxygen Devices */}
               <div className="medical-card rounded-2xl p-6">
                 <h3 className="text-xl font-bold text-medical-blue mb-4">أجهزة الأكسجين</h3>
-                <div className="grid md:grid-cols-2 gap-4">
+                <div className="grid md:grid-cols-2 gap-6">
                   {oxygenDevices.map((device, index) => (
                     <div key={index} className="bg-white rounded-lg p-4">
-                      <h4 className="font-bold text-gray-800 mb-2">{device.name}</h4>
-                      <div className="flex gap-2 flex-wrap">
-                        {device.sizes.map((size, sizeIndex) => (
-                          <span key={sizeIndex} className="bg-medical-blue/10 text-medical-blue px-3 py-1 rounded-full text-sm">
-                            {size}
-                          </span>
-                        ))}
+                      <div className="flex items-center gap-4 mb-4">
+                        <div className="w-16 h-16 bg-gray-100 rounded-lg overflow-hidden">
+                          <img 
+                            src={device.image} 
+                            alt={device.name}
+                            className="w-full h-full object-cover"
+                          />
+                        </div>
+                        <div>
+                          <h4 className="font-bold text-gray-800 mb-2">{device.name}</h4>
+                          <div className="flex gap-2 flex-wrap">
+                            {device.sizes.map((size, sizeIndex) => (
+                              <span key={sizeIndex} className="bg-medical-blue/10 text-medical-blue px-3 py-1 rounded-full text-sm">
+                                {size}
+                              </span>
+                            ))}
+                          </div>
+                        </div>
                       </div>
                     </div>
                   ))}
@@ -205,10 +269,14 @@ const MedicalSupplies = () => {
                 <div className="grid sm:grid-cols-3 gap-4">
                   {bipapDevices.map((device, index) => (
                     <div key={index} className="bg-white rounded-lg p-4 text-center">
-                      <div className="w-16 h-16 bg-medical-teal/10 rounded-lg mx-auto mb-2 flex items-center justify-center">
-                        <Stethoscope className="w-8 h-8 text-medical-teal" />
+                      <div className="w-20 h-20 bg-gray-100 rounded-lg mx-auto mb-2 overflow-hidden">
+                        <img 
+                          src={device.image} 
+                          alt={device.name}
+                          className="w-full h-full object-cover"
+                        />
                       </div>
-                      <p className="font-medium text-gray-800">{device}</p>
+                      <p className="font-medium text-gray-800">{device.name}</p>
                     </div>
                   ))}
                 </div>
@@ -220,10 +288,14 @@ const MedicalSupplies = () => {
                 <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-3">
                   {pressureDevices.map((device, index) => (
                     <div key={index} className="bg-white rounded-lg p-3 text-center">
-                      <div className="w-12 h-12 bg-medical-green/10 rounded-lg mx-auto mb-2 flex items-center justify-center">
-                        <Heart className="w-6 h-6 text-medical-green" />
+                      <div className="w-16 h-16 bg-gray-100 rounded-lg mx-auto mb-2 overflow-hidden">
+                        <img 
+                          src={device.image} 
+                          alt={device.name}
+                          className="w-full h-full object-cover"
+                        />
                       </div>
-                      <p className="text-sm font-medium text-gray-800">{device}</p>
+                      <p className="text-sm font-medium text-gray-800">{device.name}</p>
                     </div>
                   ))}
                 </div>
@@ -235,10 +307,14 @@ const MedicalSupplies = () => {
                 <div className="grid sm:grid-cols-3 lg:grid-cols-4 gap-3">
                   {sugarDevices.map((device, index) => (
                     <div key={index} className="bg-white rounded-lg p-3 text-center">
-                      <div className="w-12 h-12 bg-medical-blue/10 rounded-lg mx-auto mb-2 flex items-center justify-center">
-                        <Package className="w-6 h-6 text-medical-blue" />
+                      <div className="w-16 h-16 bg-gray-100 rounded-lg mx-auto mb-2 overflow-hidden">
+                        <img 
+                          src={device.image} 
+                          alt={device.name}
+                          className="w-full h-full object-cover"
+                        />
                       </div>
-                      <p className="text-sm font-medium text-gray-800">{device}</p>
+                      <p className="text-sm font-medium text-gray-800">{device.name}</p>
                     </div>
                   ))}
                 </div>
