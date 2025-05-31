@@ -14,7 +14,7 @@ const AboutSection = () => {
         }
       },
       { 
-        threshold: 0.3,
+        threshold: 0,
         rootMargin: '50px 0px -50px 0px'
       }
     );
