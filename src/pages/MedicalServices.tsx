@@ -1,28 +1,53 @@
 
-import { Phone, MessageCircle, Heart, Stethoscope, UserCheck, Clock, Shield, Users } from 'lucide-react';
+import { Phone, MessageCircle, Heart, Stethoscope, UserCheck, Clock, Shield, Users, TestTube, Activity } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import WhatsAppFloat from '@/components/WhatsAppFloat';
 import FloatingPhoneButton from '@/components/FloatingPhoneButton';
-import { Link } from 'react-router-dom';
 
 const MedicalServices = () => {
   const services = [
     {
       id: 1,
+      title: "خدمة التحاليل المنزلية",
+      description: "نقدم خدمة التحاليل الطبية في منزلك مع فريق متخصص ومعمل معتمد لضمان دقة النتائج وسرعة الحصول عليها",
+      image: "https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=800&q=80",
+      features: [
+        "تحاليل دم شاملة (صورة دم كاملة، وظائف كبد وكلى)",
+        "تحاليل السكر والدهون والكوليسترول",
+        "تحاليل الهرمونات والفيتامينات",
+        "تحاليل البول والبراز والمزارع البكتيرية"
+      ],
+      icon: TestTube
+    },
+    {
+      id: 2,
+      title: "رسم القلب المنزلي",
+      description: "خدمة رسم القلب الكهربائي في المنزل بأحدث الأجهزة المحمولة مع طبيب متخصص لقراءة النتائج فوراً",
+      image: "https://images.unsplash.com/photo-1559757175-0eb30cd8c063?auto=format&fit=crop&w=800&q=80",
+      features: [
+        "رسم قلب كهربائي (ECG) بأحدث الأجهزة",
+        "قراءة فورية للنتائج من طبيب متخصص",
+        "متابعة حالات عدم انتظام ضربات القلب",
+        "فحص شامل للقلب والشرايين"
+      ],
+      icon: Activity
+    },
+    {
+      id: 3,
       title: "الخدمات الطبية المنزلية",
       description: "نقدم خدمات طبية متخصصة في منزلك مع فريق طبي مؤهل ومتاح 24/7 لضمان حصولك على أفضل رعاية طبية ممكنة",
-      image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&w=800&q=80",
+      image: "https://images.unsplash.com/photo-1559666126-84f389727b9a?auto=format&fit=crop&w=800&q=80",
       features: [
-        "خدمة تحاليل منزلية شاملة",
-        "رسم قلب منزلي بأحدث الأجهزة",
         "زيارات منزلية سريعة للطوارئ",
-        "متابعة طبية دورية للحالات المزمنة"
+        "متابعة طبية دورية للحالات المزمنة",
+        "حقن وتطعيمات منزلية",
+        "قياس الضغط والسكر والحرارة"
       ],
       icon: Stethoscope
     },
     {
-      id: 2,
+      id: 4,
       title: "تمريض منزلي متخصص",
       description: "فريق تمريض محترف ومدرب على أعلى مستوى لتقديم خدمات التمريض المنزلي بكفاءة عالية ورحمة واهتمام بالمريض",
       image: "https://images.unsplash.com/photo-1582750433449-648ed127bb54?auto=format&fit=crop&w=800&q=80",
@@ -35,7 +60,7 @@ const MedicalServices = () => {
       icon: UserCheck
     },
     {
-      id: 3,
+      id: 5,
       title: "رعاية كبار السن",
       description: "نوفر رعاية شاملة ومتخصصة لكبار السن مع الاهتمام بالجوانب النفسية والصحية والاجتماعية لضمان حياة كريمة ومريحة",
       image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?auto=format&fit=crop&w=800&q=80",
@@ -48,7 +73,7 @@ const MedicalServices = () => {
       icon: Heart
     },
     {
-      id: 4,
+      id: 6,
       title: "العلاج الطبيعي المنزلي",
       description: "جلسات علاج طبيعي متخصصة في المنزل مع أخصائيين مؤهلين لإعادة التأهيل والعلاج الطبيعي بأحدث التقنيات",
       image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=800&q=80",
@@ -72,12 +97,12 @@ const MedicalServices = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="pt-24 pb-16 bg-gradient-to-br from-medical-blue to-medical-teal">
+      <section className="pt-24 pb-16 bg-gradient-to-br from-blue-50 to-teal-50">
         <div className="container mx-auto px-4">
-          <div className="text-center text-white">
+          <div className="text-center text-gray-800">
             <div className="flex justify-center mb-6">
-              <div className="bg-white/20 rounded-full p-4">
-                <Stethoscope className="w-16 h-16 text-white" />
+              <div className="bg-white rounded-full p-4 shadow-lg">
+                <Stethoscope className="w-16 h-16 text-medical-blue" />
               </div>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold mb-6">الخدمات الطبية</h1>
@@ -89,7 +114,7 @@ const MedicalServices = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a 
                 href={`tel:${contactInfo.phone}`}
-                className="flex items-center gap-3 bg-white text-medical-blue px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transition-all duration-300 shadow-lg"
+                className="flex items-center gap-3 bg-medical-blue text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-medical-blue/90 transition-all duration-300 shadow-lg"
               >
                 <Phone className="w-6 h-6" />
                 اتصل الآن: {contactInfo.phone}
@@ -126,7 +151,7 @@ const MedicalServices = () => {
                 <div key={service.id} className={`flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-12 items-center`}>
                   {/* Image */}
                   <div className="w-full lg:w-1/2">
-                    <div className="relative rounded-3xl overflow-hidden shadow-2xl">
+                    <div className="relative rounded-3xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-300 hover:transform hover:scale-105">
                       <img 
                         src={service.image}
                         alt={service.title}
@@ -138,7 +163,7 @@ const MedicalServices = () => {
 
                   {/* Content */}
                   <div className="w-full lg:w-1/2">
-                    <div className="bg-white rounded-3xl p-8 shadow-xl">
+                    <div className="bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 hover:transform hover:scale-105">
                       <div className="flex items-center gap-4 mb-6">
                         <div className="bg-medical-blue/10 rounded-full p-3">
                           <IconComponent className="w-8 h-8 text-medical-blue" />
@@ -204,7 +229,7 @@ const MedicalServices = () => {
             ].map((feature, index) => {
               const IconComponent = feature.icon;
               return (
-                <div key={index} className="text-center bg-gray-50 rounded-2xl p-6">
+                <div key={index} className="text-center bg-gray-50 rounded-2xl p-6 hover:shadow-lg transition-all duration-300 hover:transform hover:scale-105">
                   <div className="bg-medical-blue/10 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">
                     <IconComponent className="w-8 h-8 text-medical-blue" />
                   </div>
@@ -218,9 +243,9 @@ const MedicalServices = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-medical-blue to-medical-teal">
+      <section className="py-20 bg-gradient-to-br from-blue-50 to-teal-50">
         <div className="container mx-auto px-4">
-          <div className="text-center text-white">
+          <div className="text-center text-gray-800">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">احجز استشارتك المجانية الآن</h2>
             <p className="text-xl mb-8 max-w-2xl mx-auto">
               تواصل معنا للحصول على استشارة طبية مجانية وتحديد الخدمة المناسبة لحالتك
@@ -229,7 +254,7 @@ const MedicalServices = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
                 href={`tel:${contactInfo.phone}`}
-                className="bg-white text-medical-blue px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transition-all duration-300 inline-flex items-center justify-center gap-2"
+                className="bg-medical-blue text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-medical-blue/90 transition-all duration-300 inline-flex items-center justify-center gap-2"
               >
                 <Phone className="w-6 h-6" />
                 اتصل الآن

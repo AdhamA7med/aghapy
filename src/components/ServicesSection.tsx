@@ -71,7 +71,7 @@ const ServicesSection = () => {
             return (
               <div 
                 key={index}
-                className="bg-white rounded-2xl p-8 h-full shadow-xl border border-gray-100"
+                className="bg-white rounded-2xl p-8 h-full shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-300 hover:transform hover:scale-105"
               >
                 <div className="text-center h-full flex flex-col">
                   {/* Icon */}

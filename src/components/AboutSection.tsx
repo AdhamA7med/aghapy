@@ -23,7 +23,7 @@ const AboutSection = () => {
           <div>
             <div className="space-y-8">
               {/* Mission */}
-              <div className="bg-white rounded-2xl p-8 shadow-xl">
+              <div className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 hover:transform hover:scale-105">
                 <div className="flex items-center mb-4">
                   <div className="bg-medical-blue/10 rounded-full p-3 ml-4">
                     <Cross className="w-8 h-8 text-medical-blue" />
@@ -36,7 +36,7 @@ const AboutSection = () => {
               </div>
 
               {/* Vision */}
-              <div className="bg-white rounded-2xl p-8 shadow-xl">
+              <div className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 hover:transform hover:scale-105">
                 <div className="flex items-center mb-4">
                   <div className="bg-medical-teal/10 rounded-full p-3 ml-4">
                     <Stethoscope className="w-8 h-8 text-medical-teal" />
@@ -49,7 +49,7 @@ const AboutSection = () => {
               </div>
 
               {/* Values */}
-              <div className="bg-white rounded-2xl p-8 shadow-xl">
+              <div className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 hover:transform hover:scale-105">
                 <div className="flex items-center mb-4">
                   <div className="bg-medical-green/10 rounded-full p-3 ml-4">
                     <Heart className="w-8 h-8 text-medical-green" />
@@ -93,25 +93,10 @@ const AboutSection = () => {
                   "صورة مميزة تجمع فريق شركة أغابي، معنا انت في أيدٍ آمنه"
                 </p>
               </div>
-
-              {/* Floating Elements */}
-              <div className="absolute -top-6 -right-6 bg-white rounded-2xl p-6 shadow-xl">
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-medical-blue">5+</div>
-                  <p className="text-sm text-gray-600">سنوات خبرة</p>
-                </div>
-              </div>
-
-              <div className="absolute -bottom-6 -left-6 bg-white rounded-2xl p-6 shadow-xl">
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-medical-teal">500+</div>
-                  <p className="text-sm text-gray-600">عميل سعيد</p>
-                </div>
-              </div>
             </div>
 
             {/* Experience Section */}
-            <div className="mt-12 bg-white rounded-2xl p-8 shadow-xl">
+            <div className="mt-12 bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 hover:transform hover:scale-105">
               <h3 className="text-2xl font-bold text-gray-800 mb-4">خبرتنا وتخصصنا</h3>
               <p className="text-gray-600 leading-relaxed mb-6">
                 فريق طبي متخصص ومؤهل من أفضل الممرضين والممرضات مع خبرة واسعة في التعامل مع جميع الحالات الطبية المختلفة.
