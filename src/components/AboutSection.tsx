@@ -1,43 +1,15 @@
 
 import { Heart, Stethoscope, Cross } from 'lucide-react';
-import { useEffect, useRef, useState } from 'react';
 
 const AboutSection = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const sectionRef = useRef<HTMLElement>(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-        }
-      },
-      { 
-        threshold: 0,
-        rootMargin: '50px 0px -50px 0px'
-      }
-    );
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
-    return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
-      }
-    };
-  }, []);
-
   return (
-    <section ref={sectionRef} id="about" className="py-20 bg-gradient-to-br from-blue-50 to-teal-50">
+    <section id="about" className="py-20 bg-gradient-to-br from-blue-50 to-teal-50">
       <div className="container mx-auto px-4">
         {/* Section Header */}
-        <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'fade-in visible' : 'fade-in'}`}>
+        <div className="text-center mb-16">
           <div className="flex justify-center mb-6">
-            <div className="bg-white rounded-full p-4 shadow-lg hover-lift">
-              <Heart className="w-12 h-12 text-medical-blue medical-icon" />
+            <div className="bg-white rounded-full p-4 shadow-lg">
+              <Heart className="w-12 h-12 text-medical-blue" />
             </div>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">من نحن</h2>
@@ -48,10 +20,10 @@ const AboutSection = () => {
 
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
-          <div className={`transition-all duration-1000 delay-200 ${isVisible ? 'slide-in-right visible' : 'slide-in-right'}`}>
+          <div>
             <div className="space-y-8">
               {/* Mission */}
-              <div className="medical-card rounded-2xl p-8 hover-lift">
+              <div className="bg-white rounded-2xl p-8 shadow-xl">
                 <div className="flex items-center mb-4">
                   <div className="bg-medical-blue/10 rounded-full p-3 ml-4">
                     <Cross className="w-8 h-8 text-medical-blue" />
@@ -64,7 +36,7 @@ const AboutSection = () => {
               </div>
 
               {/* Vision */}
-              <div className="medical-card rounded-2xl p-8 hover-lift">
+              <div className="bg-white rounded-2xl p-8 shadow-xl">
                 <div className="flex items-center mb-4">
                   <div className="bg-medical-teal/10 rounded-full p-3 ml-4">
                     <Stethoscope className="w-8 h-8 text-medical-teal" />
@@ -77,7 +49,7 @@ const AboutSection = () => {
               </div>
 
               {/* Values */}
-              <div className="medical-card rounded-2xl p-8 hover-lift">
+              <div className="bg-white rounded-2xl p-8 shadow-xl">
                 <div className="flex items-center mb-4">
                   <div className="bg-medical-green/10 rounded-full p-3 ml-4">
                     <Heart className="w-8 h-8 text-medical-green" />
@@ -103,27 +75,34 @@ const AboutSection = () => {
           </div>
 
           {/* Right Content */}
-          <div className={`transition-all duration-1000 delay-400 ${isVisible ? 'slide-in-left visible' : 'slide-in-left'}`}>
+          <div>
             <div className="relative">
-              {/* Main Image Container - Complete medical team */}
-              <div className="relative rounded-3xl overflow-hidden shadow-2xl hover-lift">
+              {/* Main Image Container - Medical team */}
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl">
                 <img 
-                  src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?auto=format&fit=crop&w=800&q=80"
+                  src="https://images.unsplash.com/photo-1559757260-a16a96265af8?auto=format&fit=crop&w=800&q=80"
                   alt="فريق طبي متخصص كامل"
                   className="w-full h-96 object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-medical-blue/20 to-transparent"></div>
               </div>
 
+              {/* Beautiful Caption */}
+              <div className="mt-6 text-center">
+                <p className="text-lg font-semibold text-gray-700 bg-white rounded-2xl p-4 shadow-lg">
+                  "صورة مميزة تجمع فريق شركة أغابي، معنا انت في أيدٍ آمنه"
+                </p>
+              </div>
+
               {/* Floating Elements */}
-              <div className="absolute -top-6 -right-6 bg-white rounded-2xl p-6 shadow-xl floating-animation">
+              <div className="absolute -top-6 -right-6 bg-white rounded-2xl p-6 shadow-xl">
                 <div className="text-center">
                   <div className="text-2xl font-bold text-medical-blue">5+</div>
                   <p className="text-sm text-gray-600">سنوات خبرة</p>
                 </div>
               </div>
 
-              <div className="absolute -bottom-6 -left-6 bg-white rounded-2xl p-6 shadow-xl floating-animation" style={{ animationDelay: '1s' }}>
+              <div className="absolute -bottom-6 -left-6 bg-white rounded-2xl p-6 shadow-xl">
                 <div className="text-center">
                   <div className="text-2xl font-bold text-medical-teal">500+</div>
                   <p className="text-sm text-gray-600">عميل سعيد</p>
@@ -132,18 +111,18 @@ const AboutSection = () => {
             </div>
 
             {/* Experience Section */}
-            <div className="mt-12 medical-card rounded-2xl p-8">
+            <div className="mt-12 bg-white rounded-2xl p-8 shadow-xl">
               <h3 className="text-2xl font-bold text-gray-800 mb-4">خبرتنا وتخصصنا</h3>
               <p className="text-gray-600 leading-relaxed mb-6">
                 فريق طبي متخصص ومؤهل من أفضل الممرضين والممرضات مع خبرة واسعة في التعامل مع جميع الحالات الطبية المختلفة.
               </p>
               
               <div className="grid grid-cols-2 gap-4">
-                <div className="text-center p-4 bg-white rounded-xl">
+                <div className="text-center p-4 bg-white rounded-xl shadow-md">
                   <div className="text-xl font-bold text-medical-blue">98%</div>
                   <p className="text-sm text-gray-600">رضا العملاء</p>
                 </div>
-                <div className="text-center p-4 bg-white rounded-xl">
+                <div className="text-center p-4 bg-white rounded-xl shadow-md">
                   <div className="text-xl font-bold text-medical-teal">24/7</div>
                   <p className="text-sm text-gray-600">متاح دائماً</p>
                 </div>

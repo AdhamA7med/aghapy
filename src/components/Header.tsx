@@ -36,6 +36,15 @@ const Header = () => {
     setIsMenuOpen(false);
   };
 
+  const handleNavigation = (path: string) => {
+    navigate(path);
+    // Scroll to top when navigating to a new page
+    setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, 100);
+    setIsMenuOpen(false);
+  };
+
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
@@ -43,8 +52,8 @@ const Header = () => {
       <nav className="container mx-auto px-4 py-4">
         <div className="flex justify-between items-center">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2 space-x-reverse">
-            <Heart className="w-8 h-8 text-medical-blue medical-icon" />
+          <Link to="/" onClick={() => handleNavigation('/')} className="flex items-center space-x-2 space-x-reverse">
+            <Heart className="w-8 h-8 text-medical-blue" />
             <div>
               <h1 className="text-2xl font-bold text-medical-blue">شركة اغابي</h1>
               <p className="text-xs text-gray-600">خدمات التمريض المنزلي</p>
@@ -71,18 +80,24 @@ const Header = () => {
             >
               خدماتنا
             </button>
-            <Link 
-              to="/medical-supplies"
+            <button
+              onClick={() => handleNavigation('/medical-services')}
+              className="text-gray-700 hover:text-medical-blue transition-colors font-medium"
+            >
+              الخدمات الطبية
+            </button>
+            <button 
+              onClick={() => handleNavigation('/medical-supplies')}
               className="text-gray-700 hover:text-medical-blue transition-colors font-medium"
             >
               المستلزمات الطبية
-            </Link>
-            <Link 
-              to="/nursing-jobs"
+            </button>
+            <button 
+              onClick={() => handleNavigation('/nursing-jobs')}
               className="text-gray-700 hover:text-medical-blue transition-colors font-medium"
             >
               التوظيف
-            </Link>
+            </button>
             <button 
               onClick={() => scrollToSection('contact')}
               className="btn-medical text-white px-6 py-2 rounded-full font-medium"
@@ -102,7 +117,7 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden mt-4 py-4 bg-white rounded-lg shadow-lg medical-card">
+          <div className="md:hidden mt-4 py-4 bg-white rounded-lg shadow-lg">
             <div className="flex flex-col space-y-4">
               <button 
                 onClick={() => scrollToSection('home')}
@@ -122,20 +137,24 @@ const Header = () => {
               >
                 خدماتنا
               </button>
-              <Link 
-                to="/medical-supplies"
-                onClick={() => setIsMenuOpen(false)}
+              <button
+                onClick={() => handleNavigation('/medical-services')}
+                className="text-gray-700 hover:text-medical-blue transition-colors font-medium text-right px-4"
+              >
+                الخدمات الطبية
+              </button>
+              <button 
+                onClick={() => handleNavigation('/medical-supplies')}
                 className="text-gray-700 hover:text-medical-blue transition-colors font-medium text-right px-4"
               >
                 المستلزمات الطبية
-              </Link>
-              <Link 
-                to="/nursing-jobs"
-                onClick={() => setIsMenuOpen(false)}
+              </button>
+              <button 
+                onClick={() => handleNavigation('/nursing-jobs')}
                 className="text-gray-700 hover:text-medical-blue transition-colors font-medium text-right px-4"
               >
                 التوظيف
-              </Link>
+              </button>
               <button 
                 onClick={() => scrollToSection('contact')}
                 className="btn-medical text-white px-6 py-2 rounded-full font-medium mx-4"

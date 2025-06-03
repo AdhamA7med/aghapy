@@ -1,5 +1,6 @@
 
 import { Heart, Stethoscope, Cross } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   const scrollToSection = (id: string) => {
@@ -7,6 +8,10 @@ const Footer = () => {
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
+  };
+
+  const handleNavigation = (path: string) => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   return (
@@ -94,12 +99,22 @@ const Footer = () => {
                 </button>
               </li>
               <li>
-                <button 
-                  onClick={() => scrollToSection('why-us')}
-                  className="text-gray-300 hover:text-white transition-colors"
+                <Link 
+                  to="/medical-services"
+                  onClick={() => handleNavigation('/medical-services')}
+                  className="text-gray-300 hover:text-white transition-colors block"
                 >
-                  لماذا نحن؟
-                </button>
+                  الخدمات الطبية
+                </Link>
+              </li>
+              <li>
+                <Link 
+                  to="/medical-supplies"
+                  onClick={() => handleNavigation('/medical-supplies')}
+                  className="text-gray-300 hover:text-white transition-colors block"
+                >
+                  المستلزمات الطبية
+                </Link>
               </li>
               <li>
                 <button 
@@ -125,6 +140,8 @@ const Footer = () => {
               <li>تمريض أطفال</li>
               <li>التمريض الليلي</li>
               <li>إدارة الأدوية</li>
+              <li>تحاليل منزلية</li>
+              <li>رسم قلب منزلي</li>
             </ul>
           </div>
         </div>
@@ -156,7 +173,7 @@ const Footer = () => {
             <div className="flex items-center gap-4">
               <a 
                 href="tel:01211112471"
-                className="bg-medical-blue hover:bg-medical-teal text-white p-3 rounded-full transition-all duration-300 hover-lift"
+                className="bg-medical-blue hover:bg-medical-teal text-white p-3 rounded-full transition-all duration-300"
                 title="اتصل الآن"
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -168,7 +185,7 @@ const Footer = () => {
                 href="https://wa.me/201211112471"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-green-500 hover:bg-green-600 text-white p-3 rounded-full transition-all duration-300 hover-lift"
+                className="bg-green-500 hover:bg-green-600 text-white p-3 rounded-full transition-all duration-300"
                 title="واتساب"
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
