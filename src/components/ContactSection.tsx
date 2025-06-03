@@ -167,7 +167,7 @@ const ContactSection = () => {
                   <p className="text-xs sm:text-sm text-gray-600">عميل سعيد</p>
                 </div>
                 <div className="bg-white/80 backdrop-blur-sm rounded-xl p-4 sm:p-6 text-center shadow-lg border border-blue-100">
-                  <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-medical-teal mb-1 sm:mb-2">5+</div>
+                  <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-medical-teal mb-1 sm:mb-2">10+</div>
                   <p className="text-xs sm:text-sm text-gray-600">سنوات خبرة</p>
                 </div>
               </div>
