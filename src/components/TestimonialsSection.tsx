@@ -1,184 +1,168 @@
 
-import { Heart, Stethoscope, Cross } from 'lucide-react';
-import { useState, useEffect } from 'react';
+import { Star, Quote } from 'lucide-react';
+import { useEffect, useRef, useState } from 'react';
 
 const TestimonialsSection = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { 
+        threshold: 0.01,
+        rootMargin: '100px 0px -50px 0px'
+      }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
 
   const testimonials = [
     {
-      name: "مريم جرجس",
-      relation: "والدة مريض",
-      text: "والله فريق شركة أغابي كان معانا في أصعب وقت. الممرضة كانت محترمة قوي ومتعاطفة. حسينا بالأمان والراحة.",
-      icon: Heart,
-      rating: 5
+      name: "أسرة مينا جورج",
+      role: "عميل راضٍ",
+      content: "والله صراحة الخدمة كانت ممتازة جداً والممرضة كانت محترفة ومتعاملة بأدب. حسينا بالأمان مع الوالد.",
+      rating: 5,
+      image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=150&q=80"
     },
     {
-      name: "مينا صبحي",
-      relation: "مريض سابق",
-      text: "خدمة ممتازة ومتابعة دقيقة بعد العملية. الفريق الطبي مؤهل ومتفهم لاحتياجات المريض. أنصح بيهم بشدة.",
-      icon: Stethoscope,
-      rating: 5
+      name: "نادية سمير فهيم",
+      role: "بنت مريضة",
+      content: "أحسن خدمة في القاهرة والله. الممرضة جت في المعاد وكانت شاطرة ومهتمة بماما جداً. ربنا يباركلهم.",
+      rating: 5,
+      image: "https://images.unsplash.com/photo-1494790108755-2616c613d93c?auto=format&fit=crop&w=150&q=80"
     },
     {
-      name: "نادية فايق",
-      relation: "ابنة مسنة",
-      text: "رعاية ماما كانت في إيدين أمينة. الممرضة كانت صبورة ومهتمة بأدق التفاصيل. ربنا يخليكم يا شركة أغابي.",
-      icon: Cross,
-      rating: 5
+      name: "عائلة رامي يوسف",
+      role: "عميل دائم",
+      content: "من أكتر من سنة بنتعامل معاهم والخدمة ثابتة وحلوة. الأسعار معقولة والفريق محترم جداً.",
+      rating: 5,
+      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=150&q=80"
     },
     {
-      name: "عادل سعد",
-      relation: "زوج مريضة",
-      text: "خدمة التمريض الليلي كانت ممتازة. قدرت أرتاح وأنا مطمن إن مراتي في رعاية كويسة قوي.",
-      icon: Heart,
-      rating: 5
+      name: "سوزان عادل بشارة",
+      role: "ابنة مريضة",
+      content: "بجد كنت قلقانة على بابا بس الممرض كان ممتاز ومتابع كل حاجة. الحمد لله بابا اتحسن كتير.",
+      rating: 5,
+      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=150&q=80"
+    },
+    {
+      name: "عم جرجس عطية",
+      role: "مريض سابق",
+      content: "والنعمة ناس محترمين أوي والخدمة فوق الممتاز. كل اللي طلبته اتعمل بكل دقة واهتمام.",
+      rating: 5,
+      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80"
+    },
+    {
+      name: "فادية مجدي توفيق",
+      role: "زوجة مريض",
+      content: "شكراً للفريق الرائع ده. جوزي كان تعبان أوي والناس دي اهتمت بيه زي أهله. ربنا يحفظهم.",
+      rating: 5,
+      image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=150&q=80"
     }
   ];
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % testimonials.length);
-    }, 5000);
-
-    return () => clearInterval(interval);
-  }, [testimonials.length]);
-
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % testimonials.length);
-  };
-
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+  const renderStars = (rating: number) => {
+    return Array.from({ length: 5 }, (_, index) => (
+      <Star
+        key={index}
+        className={`w-5 h-5 ${
+          index < rating ? 'text-yellow-400 fill-current' : 'text-gray-300'
+        }`}
+      />
+    ));
   };
 
   return (
-    <section id="testimonials" className="py-20 bg-white">
+    <section ref={sectionRef} id="testimonials" className="py-20 bg-white">
       <div className="container mx-auto px-4">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'fade-in visible' : 'fade-in'}`}>
           <div className="flex justify-center mb-6">
-            <div className="bg-gradient-to-r from-medical-green to-medical-blue rounded-full p-4 shadow-lg">
-              <Heart className="w-12 h-12 text-white" />
+            <div className="bg-medical-blue/10 rounded-full p-4">
+              <Quote className="w-12 h-12 text-medical-blue" />
             </div>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">آراء عملائنا</h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            شهادات حقيقية من عملائنا الكرام تعكس جودة خدماتنا والثقة التي وضعوها فينا
+            شهادات حقيقية من عائلات اختارت الثقة والجودة مع شركة اغابي
           </p>
         </div>
 
-        {/* Testimonials Carousel */}
-        <div className="max-w-4xl mx-auto">
-          <div className="relative">
-            {/* Main Testimonial */}
-            <div className="bg-white rounded-3xl p-12 text-center shadow-xl min-h-[400px] flex flex-col justify-center">
+        {/* Testimonials Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {testimonials.map((testimonial, index) => (
+            <div
+              key={index}
+              className={`bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 hover:transform hover:scale-105 delay-${index * 100} ${
+                isVisible ? 'scale-in visible' : 'scale-in'
+              }`}
+            >
               {/* Quote Icon */}
-              <div className="text-8xl text-medical-blue/20 mb-6">"</div>
-              
-              {/* Testimonial Text */}
-              <p className="text-xl md:text-2xl text-gray-700 leading-relaxed mb-8 italic">
-                {testimonials[currentSlide].text}
-              </p>
-
-              {/* Rating Stars */}
               <div className="flex justify-center mb-6">
-                {[...Array(testimonials[currentSlide].rating)].map((_, i) => (
-                  <Heart key={i} className="w-6 h-6 text-medical-blue fill-current mx-1" />
-                ))}
+                <div className="bg-medical-blue/10 rounded-full p-3">
+                  <Quote className="w-8 h-8 text-medical-blue" />
+                </div>
               </div>
 
-              {/* Client Info */}
+              {/* Stars */}
+              <div className="flex justify-center gap-1 mb-6">
+                {renderStars(testimonial.rating)}
+              </div>
+
+              {/* Content */}
+              <p className="text-gray-700 text-lg leading-relaxed mb-6 text-center italic">
+                "{testimonial.content}"
+              </p>
+
+              {/* User Info */}
               <div className="flex items-center justify-center gap-4">
-                <div className="w-16 h-16 bg-medical-blue rounded-full flex items-center justify-center">
-                  {(() => {
-                    const IconComponent = testimonials[currentSlide].icon;
-                    return <IconComponent className="w-8 h-8 text-white" />;
-                  })()}
-                </div>
-                <div className="text-right">
-                  <p className="font-bold text-xl text-gray-800">{testimonials[currentSlide].name}</p>
-                  <p className="text-gray-600">{testimonials[currentSlide].relation}</p>
+                <img
+                  src={testimonial.image}
+                  alt={testimonial.name}
+                  className="w-16 h-16 rounded-full object-cover border-4 border-medical-blue/20"
+                />
+                <div className="text-center">
+                  <h4 className="font-bold text-gray-800 text-lg">{testimonial.name}</h4>
+                  <p className="text-medical-blue font-medium">{testimonial.role}</p>
                 </div>
               </div>
             </div>
-
-            {/* Navigation Arrows */}
-            <button 
-              onClick={prevSlide}
-              className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-3 shadow-lg hover:shadow-xl transition-all duration-300"
-            >
-              <svg className="w-6 h-6 text-medical-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-              </svg>
-            </button>
-            
-            <button 
-              onClick={nextSlide}
-              className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-3 shadow-lg hover:shadow-xl transition-all duration-300"
-            >
-              <svg className="w-6 h-6 text-medical-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
-            </button>
-          </div>
-
-          {/* Dots Indicator */}
-          <div className="flex justify-center mt-8 gap-2">
-            {testimonials.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentSlide(index)}
-                className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                  index === currentSlide 
-                    ? 'bg-medical-blue scale-125' 
-                    : 'bg-gray-300 hover:bg-gray-400'
-                }`}
-              />
-            ))}
-          </div>
-        </div>
-
-        {/* Testimonials Grid - All Reviews */}
-        <div className="mt-16 grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {testimonials.map((testimonial, index) => {
-            const IconComponent = testimonial.icon;
-            return (
-              <div key={index} className="bg-white rounded-2xl p-6 text-center shadow-xl">
-                <div className="w-12 h-12 bg-medical-blue/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <IconComponent className="w-6 h-6 text-medical-blue" />
-                </div>
-                <h4 className="font-bold text-gray-800 mb-1">{testimonial.name}</h4>
-                <p className="text-sm text-gray-600 mb-3">{testimonial.relation}</p>
-                <div className="flex justify-center mb-3">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Heart key={i} className="w-4 h-4 text-medical-blue fill-current" />
-                  ))}
-                </div>
-                <p className="text-sm text-gray-700 leading-relaxed">
-                  {testimonial.text.substring(0, 80)}...
-                </p>
-              </div>
-            );
-          })}
+          ))}
         </div>
 
         {/* Call to Action */}
-        <div className="text-center mt-16">
-          <div className="bg-white rounded-2xl p-8 max-w-2xl mx-auto shadow-xl">
-            <h3 className="text-2xl font-bold text-gray-800 mb-4">انضم لعائلة عملائنا السعداء</h3>
-            <p className="text-gray-600 mb-6">
-              استمتع بخدمة تمريضية متميزة واحصل على الرعاية التي تستحقها
+        <div className={`text-center mt-16 transition-all duration-1000 delay-800 ${isVisible ? 'fade-in visible' : 'fade-in'}`}>
+          <div className="bg-gradient-to-br from-medical-blue/5 to-medical-teal/5 rounded-3xl p-12">
+            <h3 className="text-3xl font-bold text-gray-800 mb-6">
+              انضم لعائلة عملائنا الراضين
+            </h3>
+            <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+              اكتشف الفرق في الخدمة والجودة مع شركة اغابي
             </p>
-            <a 
-              href="https://wa.me/201211112471"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-gradient-to-r from-medical-blue to-medical-teal text-white px-8 py-3 rounded-full font-semibold transition-all duration-300 inline-flex items-center gap-2"
+            <button 
+              onClick={() => {
+                const element = document.getElementById('contact');
+                if (element) element.scrollIntoView({ behavior: 'smooth' });
+              }}
+              className="btn-medical text-white px-10 py-4 rounded-full text-lg font-semibold hover-lift inline-flex items-center gap-3"
             >
-              <Heart className="w-5 h-5" />
-              احجز استشارتك المجانية
-            </a>
+              <Quote className="w-6 h-6" />
+              ابدأ رحلتك معنا
+            </button>
           </div>
         </div>
       </div>

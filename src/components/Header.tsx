@@ -38,10 +38,8 @@ const Header = () => {
 
   const handleNavigation = (path: string) => {
     navigate(path);
-    // Scroll to top when navigating to a new page
-    setTimeout(() => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }, 100);
+    // Scroll to top immediately when navigating to a new page
+    window.scrollTo({ top: 0, behavior: 'auto' });
     setIsMenuOpen(false);
   };
 

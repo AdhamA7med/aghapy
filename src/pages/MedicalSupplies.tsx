@@ -4,12 +4,18 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import WhatsAppFloat from '@/components/WhatsAppFloat';
 import FloatingPhoneButton from '@/components/FloatingPhoneButton';
+import { useEffect } from 'react';
 
 const MedicalSupplies = () => {
+  // Scroll to top when component mounts
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const diaperBrands = [
-    { name: 'فاين كير', image: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=600&q=80' },
-    { name: 'دكتور كومفورت', image: 'https://images.unsplash.com/photo-1607619056574-7b8d3ee536b2?auto=format&fit=crop&w=600&q=80' },
-    { name: 'ساني', image: 'https://images.unsplash.com/photo-1607627000458-210e8d2bdb1d?auto=format&fit=crop&w=600&q=80' },
+    { name: 'فاين كير', image: 'https://images.unsplash.com/photo-1576671081837-49000212a370?auto=format&fit=crop&w=600&q=80' },
+    { name: 'دكتور كومفورت', image: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&w=600&q=80' },
+    { name: 'ساني', image: 'https://images.unsplash.com/photo-1631879742974-20dceb92f16e?auto=format&fit=crop&w=600&q=80' },
     { name: 'فرعونكس', image: 'https://images.unsplash.com/photo-1607027491717-7c19a81bdf19?auto=format&fit=crop&w=600&q=80' },
     { name: 'جيرماني', image: 'https://images.unsplash.com/photo-1584820927498-cfe5211fd8bf?auto=format&fit=crop&w=600&q=80' },
     { name: 'اوميجا', image: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&w=600&q=80' },
@@ -76,6 +82,37 @@ const MedicalSupplies = () => {
     { name: 'سراير طبية', image: 'https://images.unsplash.com/photo-1540574163026-643ea20ade25?auto=format&fit=crop&w=600&q=80' }
   ];
 
+  // New medical supplies categories
+  const orthopedicSupplies = [
+    { name: 'جميع انواع ومقاسات الفلانشات الطبية', image: 'https://images.unsplash.com/photo-1559757175-0eb30cd8c063?auto=format&fit=crop&w=600&q=80' },
+    { name: 'علايه تواليت بجوانب', image: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=600&q=80' },
+    { name: 'رقبة طبية', image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=600&q=80' },
+    { name: 'جميع انواع الركب', image: 'https://images.unsplash.com/photo-1582719371630-6e9a3fccf5e3?auto=format&fit=crop&w=600&q=80' },
+    { name: 'جميع انواع شرابات الدوالي', image: 'https://images.unsplash.com/photo-1605289982774-9a6fef564df8?auto=format&fit=crop&w=600&q=80' },
+    { name: 'كعب سيلكون', image: 'https://images.unsplash.com/photo-1559666126-84f389727b9a?auto=format&fit=crop&w=600&q=80' },
+    { name: 'فرش سيليكون', image: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=600&q=80' },
+    { name: 'جميع احزمة البطن والظهر', image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=600&q=80' }
+  ];
+
+  const comfortSupplies = [
+    { name: 'جميع انواع قربة المياه', image: 'https://images.unsplash.com/photo-1591123120675-6f7a16c5d883?auto=format&fit=crop&w=600&q=80' },
+    { name: 'جهاز مساج', image: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=600&q=80' },
+    { name: 'ميزان اوزان', image: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&w=600&q=80' },
+    { name: 'مرتبة هوائية كور جرانزيا', image: 'https://images.unsplash.com/photo-1631879742974-20dceb92f16e?auto=format&fit=crop&w=600&q=80' },
+    { name: 'مرتبة هوائية شرايح', image: 'https://images.unsplash.com/photo-1540574163026-643ea20ade25?auto=format&fit=crop&w=600&q=80' },
+    { name: 'انواع متعددة من المخدات الطبية', image: 'https://images.unsplash.com/photo-1596178060671-7a80dc4d6d0d?auto=format&fit=crop&w=600&q=80' }
+  ];
+
+  const respiratorySupplies = [
+    { name: 'جميع انواع اجهزة النيبولايزر للأطفال والكبار', image: 'https://images.unsplash.com/photo-1584820927498-cfe5211fd8bf?auto=format&fit=crop&w=600&q=80' },
+    { name: 'انواع متعددة من اجهزة الشفط', image: 'https://images.unsplash.com/photo-1559757175-0eb30cd8c063?auto=format&fit=crop&w=600&q=80' },
+    { name: 'ماسكات', image: 'https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?auto=format&fit=crop&w=600&q=80' }
+  ];
+
+  const protectiveSupplies = [
+    { name: 'انواع متعددة من الجوانتيات', image: 'https://images.unsplash.com/photo-1631815588090-d4bfec5b1ccb?auto=format&fit=crop&w=600&q=80' }
+  ];
+
   return (
     <div className="min-h-screen bg-gray-50">
       <Header />
@@ -129,14 +166,14 @@ const MedicalSupplies = () => {
             
             <div className="grid md:grid-cols-2 gap-8">
               {/* Diapers */}
-              <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:transform hover:scale-105">
                 <h3 className="text-xl font-bold text-medical-blue mb-4 flex items-center gap-2">
                   <Heart className="w-6 h-6" />
                   أنواع الحفاضات
                 </h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   {diaperBrands.map((brand, index) => (
-                    <div key={index} className="bg-gray-50 rounded-lg p-4 text-center hover:shadow-md transition-all hover:transform hover:scale-105">
+                    <div key={index} className="bg-gray-50 rounded-lg p-4 text-center hover:shadow-md transition-all duration-300 hover:transform hover:scale-105">
                       <div className="w-56 h-56 bg-white rounded-lg mx-auto mb-3 overflow-hidden border-2 border-gray-200">
                         <img 
                           src={brand.image} 
@@ -152,14 +189,14 @@ const MedicalSupplies = () => {
               </div>
 
               {/* Bed Sheets */}
-              <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:transform hover:scale-105">
                 <h3 className="text-xl font-bold text-medical-teal mb-4 flex items-center gap-2">
                   <Stethoscope className="w-6 h-6" />
                   أنواع المفارش
                 </h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   {bedSheets.map((sheet, index) => (
-                    <div key={index} className="bg-gray-50 rounded-lg p-4 text-center hover:shadow-md transition-all hover:transform hover:scale-105">
+                    <div key={index} className="bg-gray-50 rounded-lg p-4 text-center hover:shadow-md transition-all duration-300 hover:transform hover:scale-105">
                       <div className="w-56 h-56 bg-white rounded-lg mx-auto mb-3 overflow-hidden border-2 border-gray-200">
                         <img 
                           src={sheet.image} 
@@ -184,7 +221,7 @@ const MedicalSupplies = () => {
             
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {rentalEquipment.map((item, index) => (
-                <div key={index} className="bg-white rounded-xl p-6 text-center hover:shadow-lg transition-all shadow-md hover:transform hover:scale-105">
+                <div key={index} className="bg-white rounded-xl p-6 text-center hover:shadow-lg transition-all duration-300 shadow-md hover:transform hover:scale-105">
                   <div className="w-56 h-56 bg-gray-50 rounded-lg mx-auto mb-4 overflow-hidden border-2 border-gray-200">
                     <img 
                       src={item.image} 
@@ -199,7 +236,96 @@ const MedicalSupplies = () => {
             </div>
           </div>
 
-          {/* Section 3: Medical Devices */}
+          {/* Section 3: Orthopedic Supplies */}
+          <div className="mb-16">
+            <div className="text-center mb-8">
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4">المستلزمات الطبية والأورثوبيدية</h2>
+              <p className="text-gray-600">جميع المستلزمات الطبية والأورثوبيدية المتخصصة</p>
+            </div>
+            
+            <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:transform hover:scale-105">
+              <h3 className="text-xl font-bold text-medical-blue mb-4">المستلزمات الأورثوبيدية والعلاجية</h3>
+              <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                {orthopedicSupplies.map((item, index) => (
+                  <div key={index} className="bg-gray-50 rounded-lg p-4 text-center hover:shadow-md transition-all duration-300 hover:transform hover:scale-105">
+                    <div className="w-40 h-40 bg-white rounded-lg mx-auto mb-3 overflow-hidden border-2 border-gray-200">
+                      <img 
+                        src={item.image} 
+                        alt={item.name}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    <p className="text-sm font-medium text-gray-800">{item.name}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Section 4: Comfort and Therapeutic Supplies */}
+          <div className="mb-16">
+            <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:transform hover:scale-105">
+              <h3 className="text-xl font-bold text-medical-teal mb-4">مستلزمات الراحة والعلاج</h3>
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                {comfortSupplies.map((item, index) => (
+                  <div key={index} className="bg-gray-50 rounded-lg p-4 text-center hover:shadow-md transition-all duration-300 hover:transform hover:scale-105">
+                    <div className="w-48 h-48 bg-white rounded-lg mx-auto mb-3 overflow-hidden border-2 border-gray-200">
+                      <img 
+                        src={item.image} 
+                        alt={item.name}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    <p className="text-lg font-medium text-gray-800">{item.name}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Section 5: Respiratory Supplies */}
+          <div className="mb-16">
+            <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:transform hover:scale-105">
+              <h3 className="text-xl font-bold text-medical-green mb-4">مستلزمات الجهاز التنفسي</h3>
+              <div className="grid sm:grid-cols-3 gap-6">
+                {respiratorySupplies.map((item, index) => (
+                  <div key={index} className="bg-gray-50 rounded-lg p-4 text-center hover:shadow-md transition-all duration-300 hover:transform hover:scale-105">
+                    <div className="w-48 h-48 bg-white rounded-lg mx-auto mb-3 overflow-hidden border-2 border-gray-200">
+                      <img 
+                        src={item.image} 
+                        alt={item.name}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    <p className="text-lg font-medium text-gray-800">{item.name}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Section 6: Protective Supplies */}
+          <div className="mb-16">
+            <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:transform hover:scale-105">
+              <h3 className="text-xl font-bold text-medical-blue mb-4">مستلزمات الحماية</h3>
+              <div className="grid sm:grid-cols-2 gap-6">
+                {protectiveSupplies.map((item, index) => (
+                  <div key={index} className="bg-gray-50 rounded-lg p-4 text-center hover:shadow-md transition-all duration-300 hover:transform hover:scale-105">
+                    <div className="w-48 h-48 bg-white rounded-lg mx-auto mb-3 overflow-hidden border-2 border-gray-200">
+                      <img 
+                        src={item.image} 
+                        alt={item.name}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    <p className="text-lg font-medium text-gray-800">{item.name}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Section 7: Medical Devices */}
           <div>
             <div className="text-center mb-8">
               <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4">الأجهزة الطبية</h2>
@@ -208,11 +334,11 @@ const MedicalSupplies = () => {
             
             <div className="space-y-8">
               {/* Oxygen Devices */}
-              <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:transform hover:scale-105">
                 <h3 className="text-xl font-bold text-medical-blue mb-4">أجهزة الأكسجين</h3>
                 <div className="grid md:grid-cols-2 gap-6">
                   {oxygenDevices.map((device, index) => (
-                    <div key={index} className="bg-gray-50 rounded-lg p-6 hover:shadow-md transition-all hover:transform hover:scale-105">
+                    <div key={index} className="bg-gray-50 rounded-lg p-6 hover:shadow-md transition-all duration-300 hover:transform hover:scale-105">
                       <div className="flex items-center gap-6 mb-4">
                         <div className="w-40 h-40 bg-white rounded-lg overflow-hidden border-2 border-gray-200">
                           <img 
@@ -238,11 +364,11 @@ const MedicalSupplies = () => {
               </div>
 
               {/* BiPAP Devices */}
-              <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:transform hover:scale-105">
                 <h3 className="text-xl font-bold text-medical-teal mb-4">أجهزة بيباب</h3>
                 <div className="grid sm:grid-cols-3 gap-6">
                   {bipapDevices.map((device, index) => (
-                    <div key={index} className="bg-gray-50 rounded-lg p-4 text-center hover:shadow-md transition-all hover:transform hover:scale-105">
+                    <div key={index} className="bg-gray-50 rounded-lg p-4 text-center hover:shadow-md transition-all duration-300 hover:transform hover:scale-105">
                       <div className="w-48 h-48 bg-white rounded-lg mx-auto mb-3 overflow-hidden border-2 border-gray-200">
                         <img 
                           src={device.image} 
@@ -257,11 +383,11 @@ const MedicalSupplies = () => {
               </div>
 
               {/* Pressure Devices */}
-              <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:transform hover:scale-105">
                 <h3 className="text-xl font-bold text-medical-green mb-4">أجهزة الضغط</h3>
                 <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
                   {pressureDevices.map((device, index) => (
-                    <div key={index} className="bg-gray-50 rounded-lg p-4 text-center hover:shadow-md transition-all hover:transform hover:scale-105">
+                    <div key={index} className="bg-gray-50 rounded-lg p-4 text-center hover:shadow-md transition-all duration-300 hover:transform hover:scale-105">
                       <div className="w-40 h-40 bg-white rounded-lg mx-auto mb-3 overflow-hidden border-2 border-gray-200">
                         <img 
                           src={device.image} 
@@ -276,11 +402,11 @@ const MedicalSupplies = () => {
               </div>
 
               {/* Sugar Devices */}
-              <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:transform hover:scale-105">
                 <h3 className="text-xl font-bold text-medical-blue mb-4">أجهزة السكر والشرائط</h3>
                 <div className="grid sm:grid-cols-3 lg:grid-cols-4 gap-4">
                   {sugarDevices.map((device, index) => (
-                    <div key={index} className="bg-gray-50 rounded-lg p-4 text-center hover:shadow-md transition-all hover:transform hover:scale-105">
+                    <div key={index} className="bg-gray-50 rounded-lg p-4 text-center hover:shadow-md transition-all duration-300 hover:transform hover:scale-105">
                       <div className="w-40 h-40 bg-white rounded-lg mx-auto mb-3 overflow-hidden border-2 border-gray-200">
                         <img 
                           src={device.image} 
@@ -298,7 +424,7 @@ const MedicalSupplies = () => {
 
           {/* Contact Section */}
           <div className="mt-16 text-center">
-            <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
+            <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:transform hover:scale-105">
               <h3 className="text-2xl font-bold text-gray-800 mb-4">للاستفسار والطلب</h3>
               <p className="text-gray-600 mb-6">تواصل معنا الآن للحصول على أفضل الأسعار والخدمات</p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
