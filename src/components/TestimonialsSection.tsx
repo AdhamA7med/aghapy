@@ -35,43 +35,37 @@ const TestimonialsSection = () => {
       name: "أسرة مينا جورج",
       role: "عميل راضٍ",
       content: "والله صراحة الخدمة كانت ممتازة جداً والممرضة كانت محترفة ومتعاملة بأدب. حسينا بالأمان مع الوالد.",
-      rating: 5,
-      image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=150&q=80"
+      rating: 5
     },
     {
       name: "نادية سمير فهيم",
       role: "بنت مريضة",
       content: "أحسن خدمة في القاهرة والله. الممرضة جت في المعاد وكانت شاطرة ومهتمة بماما جداً. ربنا يباركلهم.",
-      rating: 5,
-      image: "https://images.unsplash.com/photo-1494790108755-2616c613d93c?auto=format&fit=crop&w=150&q=80"
+      rating: 5
     },
     {
       name: "عائلة رامي يوسف",
       role: "عميل دائم",
       content: "من أكتر من سنة بنتعامل معاهم والخدمة ثابتة وحلوة. الأسعار معقولة والفريق محترم جداً.",
-      rating: 5,
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=150&q=80"
+      rating: 5
     },
     {
       name: "سوزان عادل بشارة",
       role: "ابنة مريضة",
       content: "بجد كنت قلقانة على بابا بس الممرض كان ممتاز ومتابع كل حاجة. الحمد لله بابا اتحسن كتير.",
-      rating: 5,
-      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=150&q=80"
+      rating: 5
     },
     {
       name: "عم جرجس عطية",
       role: "مريض سابق",
       content: "والنعمة ناس محترمين أوي والخدمة فوق الممتاز. كل اللي طلبته اتعمل بكل دقة واهتمام.",
-      rating: 5,
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80"
+      rating: 5
     },
     {
       name: "فادية مجدي توفيق",
       role: "زوجة مريض",
       content: "شكراً للفريق الرائع ده. جوزي كان تعبان أوي والناس دي اهتمت بيه زي أهله. ربنا يحفظهم.",
-      rating: 5,
-      image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=150&q=80"
+      rating: 5
     }
   ];
 
@@ -107,7 +101,7 @@ const TestimonialsSection = () => {
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className={`bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 hover:transform hover:scale-105 delay-${index * 100} ${
+              className={`bg-white rounded-2xl p-8 shadow-lg border border-gray-100 transition-all duration-300 delay-${index * 100} ${
                 isVisible ? 'scale-in visible' : 'scale-in'
               }`}
             >
@@ -129,16 +123,9 @@ const TestimonialsSection = () => {
               </p>
 
               {/* User Info */}
-              <div className="flex items-center justify-center gap-4">
-                <img
-                  src={testimonial.image}
-                  alt={testimonial.name}
-                  className="w-16 h-16 rounded-full object-cover border-4 border-medical-blue/20"
-                />
-                <div className="text-center">
-                  <h4 className="font-bold text-gray-800 text-lg">{testimonial.name}</h4>
-                  <p className="text-medical-blue font-medium">{testimonial.role}</p>
-                </div>
+              <div className="text-center">
+                <h4 className="font-bold text-gray-800 text-lg">{testimonial.name}</h4>
+                <p className="text-medical-blue font-medium">{testimonial.role}</p>
               </div>
             </div>
           ))}

@@ -166,7 +166,7 @@ const MedicalSupplies = () => {
             
             <div className="grid md:grid-cols-2 gap-8">
               {/* Diapers */}
-              <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:transform hover:scale-105">
+              <div className="bg-white rounded-2xl p-6 shadow-lg">
                 <h3 className="text-xl font-bold text-medical-blue mb-4 flex items-center gap-2">
                   <Heart className="w-6 h-6" />
                   أنواع الحفاضات
@@ -189,7 +189,7 @@ const MedicalSupplies = () => {
               </div>
 
               {/* Bed Sheets */}
-              <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:transform hover:scale-105">
+              <div className="bg-white rounded-2xl p-6 shadow-lg">
                 <h3 className="text-xl font-bold text-medical-teal mb-4 flex items-center gap-2">
                   <Stethoscope className="w-6 h-6" />
                   أنواع المفارش
@@ -243,7 +243,7 @@ const MedicalSupplies = () => {
               <p className="text-gray-600">جميع المستلزمات الطبية والأورثوبيدية المتخصصة</p>
             </div>
             
-            <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:transform hover:scale-105">
+            <div className="bg-white rounded-2xl p-6 shadow-lg">
               <h3 className="text-xl font-bold text-medical-blue mb-4">المستلزمات الأورثوبيدية والعلاجية</h3>
               <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
                 {orthopedicSupplies.map((item, index) => (
@@ -264,7 +264,7 @@ const MedicalSupplies = () => {
 
           {/* Section 4: Comfort and Therapeutic Supplies */}
           <div className="mb-16">
-            <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:transform hover:scale-105">
+            <div className="bg-white rounded-2xl p-6 shadow-lg">
               <h3 className="text-xl font-bold text-medical-teal mb-4">مستلزمات الراحة والعلاج</h3>
               <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 {comfortSupplies.map((item, index) => (
@@ -285,7 +285,7 @@ const MedicalSupplies = () => {
 
           {/* Section 5: Respiratory Supplies */}
           <div className="mb-16">
-            <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:transform hover:scale-105">
+            <div className="bg-white rounded-2xl p-6 shadow-lg">
               <h3 className="text-xl font-bold text-medical-green mb-4">مستلزمات الجهاز التنفسي</h3>
               <div className="grid sm:grid-cols-3 gap-6">
                 {respiratorySupplies.map((item, index) => (
@@ -306,7 +306,7 @@ const MedicalSupplies = () => {
 
           {/* Section 6: Protective Supplies */}
           <div className="mb-16">
-            <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:transform hover:scale-105">
+            <div className="bg-white rounded-2xl p-6 shadow-lg">
               <h3 className="text-xl font-bold text-medical-blue mb-4">مستلزمات الحماية</h3>
               <div className="grid sm:grid-cols-2 gap-6">
                 {protectiveSupplies.map((item, index) => (
@@ -334,7 +334,7 @@ const MedicalSupplies = () => {
             
             <div className="space-y-8">
               {/* Oxygen Devices */}
-              <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:transform hover:scale-105">
+              <div className="bg-white rounded-2xl p-6 shadow-lg">
                 <h3 className="text-xl font-bold text-medical-blue mb-4">أجهزة الأكسجين</h3>
                 <div className="grid md:grid-cols-2 gap-6">
                   {oxygenDevices.map((device, index) => (
@@ -364,7 +364,7 @@ const MedicalSupplies = () => {
               </div>
 
               {/* BiPAP Devices */}
-              <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:transform hover:scale-105">
+              <div className="bg-white rounded-2xl p-6 shadow-lg">
                 <h3 className="text-xl font-bold text-medical-teal mb-4">أجهزة بيباب</h3>
                 <div className="grid sm:grid-cols-3 gap-6">
                   {bipapDevices.map((device, index) => (
@@ -383,7 +383,7 @@ const MedicalSupplies = () => {
               </div>
 
               {/* Pressure Devices */}
-              <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:transform hover:scale-105">
+              <div className="bg-white rounded-2xl p-6 shadow-lg">
                 <h3 className="text-xl font-bold text-medical-green mb-4">أجهزة الضغط</h3>
                 <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
                   {pressureDevices.map((device, index) => (
@@ -402,7 +402,7 @@ const MedicalSupplies = () => {
               </div>
 
               {/* Sugar Devices */}
-              <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:transform hover:scale-105">
+              <div className="bg-white rounded-2xl p-6 shadow-lg">
                 <h3 className="text-xl font-bold text-medical-blue mb-4">أجهزة السكر والشرائط</h3>
                 <div className="grid sm:grid-cols-3 lg:grid-cols-4 gap-4">
                   {sugarDevices.map((device, index) => (
@@ -424,7 +424,7 @@ const MedicalSupplies = () => {
 
           {/* Contact Section */}
           <div className="mt-16 text-center">
-            <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:transform hover:scale-105">
+            <div className="bg-white rounded-2xl p-8 shadow-lg">
               <h3 className="text-2xl font-bold text-gray-800 mb-4">للاستفسار والطلب</h3>
               <p className="text-gray-600 mb-6">تواصل معنا الآن للحصول على أفضل الأسعار والخدمات</p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
