@@ -1,3 +1,4 @@
+
 import { Phone, MessageCircle, Heart, Stethoscope, Package } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -117,10 +118,10 @@ const MedicalSupplies = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="pt-24 pb-12 bg-gradient-to-br from-blue-50 to-teal-50" role="banner">
+      <section className="pt-24 pb-12 bg-gradient-to-br from-blue-50 to-teal-50">
         <div className="container mx-auto px-4">
-          <header className="text-center mb-8">
-            <div className="flex justify-center mb-6" aria-hidden="true">
+          <div className="text-center mb-8">
+            <div className="flex justify-center mb-6">
               <div className="bg-white rounded-full p-4 shadow-lg">
                 <Package className="w-12 h-12 text-medical-blue" />
               </div>
@@ -129,14 +130,13 @@ const MedicalSupplies = () => {
             <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
               كل اللي ممكن تحتاجه هتلاقيه عندنا بأفضل سعر وأعلى جودة
             </p>
-          </header>
+          </div>
           
           {/* Contact Info */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <a 
               href="tel:01206374441"
               className="bg-medical-blue hover:bg-medical-blue/90 text-white px-6 py-3 rounded-full font-semibold flex items-center justify-center gap-2 transition-colors"
-              aria-label="اتصل على الرقم 01206374441"
             >
               <Phone className="w-5 h-5" />
               اتصل: 01206374441
@@ -146,7 +146,6 @@ const MedicalSupplies = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-full font-semibold transition-all duration-300 flex items-center justify-center gap-2"
-              aria-label="تواصل عبر الواتساب على الرقم 01095113838"
             >
               <MessageCircle className="w-5 h-5" />
               واتساب: 01095113838
@@ -156,7 +155,7 @@ const MedicalSupplies = () => {
       </section>
 
       {/* Main Content */}
-      <main className="py-16">
+      <section className="py-16">
         <div className="container mx-auto px-4">
           
           {/* Section 1: Diapers and Bed Sheets */}
@@ -327,33 +326,32 @@ const MedicalSupplies = () => {
           </div>
 
           {/* Section 7: Medical Devices */}
-          <section>
-            <header className="text-center mb-8">
+          <div>
+            <div className="text-center mb-8">
               <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4">الأجهزة الطبية</h2>
               <p className="text-gray-600">إيجار أجهزة الأكسجين وجميع مستلزمات العيادات والمستشفيات</p>
-            </header>
+            </div>
             
             <div className="space-y-8">
-              {/* Oxygen Devices - Fixed responsive layout */}
+              {/* Oxygen Devices */}
               <div className="bg-white rounded-2xl p-6 shadow-lg">
                 <h3 className="text-xl font-bold text-medical-blue mb-4">أجهزة الأكسجين</h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="grid md:grid-cols-2 gap-6">
                   {oxygenDevices.map((device, index) => (
-                    <div key={index} className="bg-gray-50 rounded-lg p-4 md:p-6">
-                      <div className="flex flex-col sm:flex-row items-center gap-4 mb-4">
-                        <div className="w-32 h-32 sm:w-40 sm:h-40 bg-white rounded-lg overflow-hidden border-2 border-gray-200 flex-shrink-0">
+                    <div key={index} className="bg-gray-50 rounded-lg p-6 hover:shadow-md transition-all duration-300 hover:transform hover:scale-105">
+                      <div className="flex items-center gap-6 mb-4">
+                        <div className="w-40 h-40 bg-white rounded-lg overflow-hidden border-2 border-gray-200">
                           <img 
                             src={device.image} 
                             alt={device.name}
                             className="w-full h-full object-cover"
-                            loading="lazy"
                           />
                         </div>
-                        <div className="text-center sm:text-right">
+                        <div>
                           <h4 className="font-bold text-gray-800 mb-2 text-lg">{device.name}</h4>
-                          <div className="flex flex-wrap gap-2 justify-center sm:justify-start">
+                          <div className="flex gap-2 flex-wrap">
                             {device.sizes.map((size, sizeIndex) => (
-                              <span key={sizeIndex} className="bg-medical-blue/10 text-medical-blue px-3 py-1 rounded-full text-sm whitespace-nowrap">
+                              <span key={sizeIndex} className="bg-medical-blue/10 text-medical-blue px-3 py-1 rounded-full text-sm">
                                 {size}
                               </span>
                             ))}
@@ -422,7 +420,7 @@ const MedicalSupplies = () => {
                 </div>
               </div>
             </div>
-          </section>
+          </div>
 
           {/* Contact Section */}
           <div className="mt-16 text-center">
@@ -450,7 +448,7 @@ const MedicalSupplies = () => {
             </div>
           </div>
         </div>
-      </main>
+      </section>
 
       <Footer />
       <WhatsAppFloat />
