@@ -80,7 +80,7 @@ const AboutSection = () => {
               {/* Main Image Container - Medical team */}
               <div className="relative rounded-3xl overflow-hidden shadow-2xl">
                 <img 
-                  src="https://images.app.goo.gl/fPz6a9dw2c9ixyHFA"
+                  src=""
                   alt="فريق طبي متخصص كامل"
                   className="w-full h-96 object-cover"
                 />
