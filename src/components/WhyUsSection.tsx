@@ -35,7 +35,7 @@ const WhyUsSection = () => {
       icon: Heart,
       title: "خبرة وكفاءة",
       description: "فريق طبي متخصص مع سنوات من الخبرة في مجال التمريض المنزلي والرعاية الطبية",
-      stats: "5+ سنوات خبرة"
+      stats: "10+ سنوات خبرة"
     },
     {
       icon: Stethoscope,
