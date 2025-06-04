@@ -72,20 +72,20 @@ const MedicalServices = () => {
       ],
       icon: Heart
     },
-  //   {
-  //     id: 6,
-  //     title: "العلاج الطبيعي المنزلي",
-  //     description: "جلسات علاج طبيعي متخصصة في المنزل مع أخصائيين مؤهلين لإعادة التأهيل والعلاج الطبيعي بأحدث التقنيات",
-  //     image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=800&q=80",
-  //     features: [
-  //       "إعادة تأهيل ما بعد الإصابات",
-  //       "علاج طبيعي للعمود الفقري والمفاصل",
-  //       "تمارين علاجية مخصصة لكل حالة",
-  //       "أجهزة علاج طبيعي متقدمة"
-  //     ],
-  //     icon: Users
-  //   }
-  // ];
+    {
+      id: 6,
+      title: "العلاج الطبيعي المنزلي",
+      description: "جلسات علاج طبيعي متخصصة في المنزل مع أخصائيين مؤهلين لإعادة التأهيل والعلاج الطبيعي بأحدث التقنيات",
+      image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=800&q=80",
+      features: [
+        "إعادة تأهيل ما بعد الإصابات",
+        "علاج طبيعي للعمود الفقري والمفاصل",
+        "تمارين علاجية مخصصة لكل حالة",
+        "أجهزة علاج طبيعي متقدمة"
+      ],
+      icon: Users
+    }
+  ];
 
   const contactInfo = {
     phone: "01211112471",
@@ -246,9 +246,9 @@ const MedicalServices = () => {
       <section className="py-20 bg-gradient-to-br from-blue-50 to-teal-50">
         <div className="container mx-auto px-4">
           <div className="text-center text-gray-800">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">احجز خدمتك معنا الآن</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">احجز استشارتك المجانية الآن</h2>
             <p className="text-xl mb-8 max-w-2xl mx-auto">
-              تواصل معنا للاستفسار وتحديد الخدمة المناسبة لحالتك
+              تواصل معنا للحصول على استشارة طبية مجانية وتحديد الخدمة المناسبة لحالتك
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

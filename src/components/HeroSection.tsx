@@ -89,7 +89,7 @@ const HeroSection = () => {
               <p className="text-gray-600 mt-2">خدمة متاحة</p>
             </div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-medical-green counter">10+</div>
+              <div className="text-3xl md:text-4xl font-bold text-medical-green counter">5+</div>
               <p className="text-gray-600 mt-2">سنوات خبرة</p>
             </div>
             <div className="text-center">
