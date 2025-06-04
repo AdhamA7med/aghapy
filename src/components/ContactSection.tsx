@@ -139,7 +139,7 @@ const ContactSection = () => {
                     className="w-full bg-medical-blue/10 hover:bg-medical-blue/20 text-medical-blue font-semibold px-4 py-3 sm:px-6 sm:py-4 rounded-lg transition-colors flex items-center justify-center gap-2 text-sm sm:text-base"
                   >
                     <Heart className="w-4 h-4 sm:w-5 sm:h-5" />
-                    استشارة مجانية
+للحجز والاستفسار
                   </button>
                   
                   <button 
@@ -167,7 +167,7 @@ const ContactSection = () => {
                   <p className="text-xs sm:text-sm text-gray-600">عميل سعيد</p>
                 </div>
                 <div className="bg-white/80 backdrop-blur-sm rounded-xl p-4 sm:p-6 text-center shadow-lg border border-blue-100">
-                  <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-medical-teal mb-1 sm:mb-2">5+</div>
+                  <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-medical-teal mb-1 sm:mb-2">10+</div>
                   <p className="text-xs sm:text-sm text-gray-600">سنوات خبرة</p>
                 </div>
               </div>
