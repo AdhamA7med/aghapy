@@ -1,7 +1,7 @@
 import fineCareImg from '@/assets/فاين كير.jpg';
 import doctorComfortImg from '@/assets/دكتور كومفورت.webp';
 import saniImg from '@/assets/ساني.png';
-import pharaonicsImg from '@/assets/فرعونكس.jpg';
+import pharaonicsImg from '@/assets/فرعونكس.jfif';
 import germanyImg from '@/assets/جيرماني.jpg';
 import omegaImg from '@/assets/اوميجا.jpg';
 import highCareImg from '@/assets/هاي كير.jpg';
@@ -12,7 +12,7 @@ import saniBedSheetImg from '@/assets/مفارش ساني.jfif';
 import omegaBedSheetImg from '@/assets/مفارش اوميجا.jpg';
 import germanyBedSheetImg from '@/assets/مفارش جيرماني.jpg';
 import sleepyBedSheetImg from '@/assets/سليبي مفارش.jfif';
-import doctorComfortBedSheetImg from '@/assets/مفارش دكتور كمفورت.avif';
+import doctorComfortBedSheetImg from '@/assets/كومفورت مفارش.jpg';
 import highCareBedSheetImg from '@/assets/مفارش هاي كير.jfif';
 import dryPlusBedSheetImg from '@/assets/مفارش دراي بلس.jfif';
 
@@ -75,7 +75,7 @@ import threeHCheckImg from '@/assets/ثري اتشيك.webp';
 import tangoImg from '@/assets/تانجو.jpeg';
 import fineTestImg from '@/assets/فاين تيست.jpg';
 import uwellImg from '@/assets/يو ويل.webp';
-import contourTsImg from '@/assets/كنتور بلاس.jpg';
+import contourTsImg from '@/assets/كنتور تي اس.jpg';
 import bayerFormaImg from '@/assets/بايفورما.avif';
 import perfectImg from '@/assets/برفكت.jfif';
 import accuChekInstantImg from '@/assets/اكواتشيك انستنت.jpg';
