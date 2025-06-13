@@ -20,7 +20,7 @@ import dryPlusBedSheetImg from '@/assets/مفارش دراي بلس.jfif';
 import wheelchairsImg from '@/assets/كرسي-متحرك-استاندر-عجل-صغير-مجهز-حمام-حركة-دخل-المنزل.jpg';
 import medicalWalkersImg from '@/assets/مشايات طبية.jpg';
 import medicalCrutchesImg from '@/assets/عكاكيز طبية.webp';
-import medicalBedsImg from '@/assets/سراير طبية.webp';
+import medicalBedsImg from '@/assets/سرير كهرباي.png';
 
 // Orthopedic Supplies
 import medicalFlangesImg from '@/assets/جميع انواع ومقاسات الفلانشات الطبية.jfif';
@@ -63,7 +63,7 @@ import granziaImg from '@/assets/جرانزيا عادي وديجيتال.jpeg';
 import beurerDigitalImg from '@/assets/بيلو ديجيتال.webp';
 import uwellDigitalImg from '@/assets/يو ويل ديجيتال.jpg';
 import rossmaxDigitalImg from '@/assets/روز ماكس ديجيتال.jpg';
-import orthoDigitalImg from '@/assets/روز ماكس ديجيتال.jpg';
+import orthoDigitalImg from '@/assets/اورثو.jfif';
 import accurateDigitalImg from '@/assets/اكيوريت ديجيتال.jpg';
 import medzaniaMercuryImg from '@/assets/جهاز-ضغط-ميديزانا-3.jpg';
 import primaMercuryImg from '@/assets/بريما زئبقي.webp';
