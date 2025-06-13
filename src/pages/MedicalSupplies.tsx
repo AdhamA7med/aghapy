@@ -71,7 +71,7 @@ import primaMercuryImg from '@/assets/بريما زئبقي.webp';
 // Sugar Devices
 import rightTestImg from '@/assets/رايت تيست.jpg';
 import contourPlusImg from '@/assets/كنتور بلاس.jpg';
-import threeHCheckImg from '@/assets/ثري اتشيك.webp';
+// import threeHCheckImg from '@/assets/ثري اتشيك.webp';
 import tangoImg from '@/assets/تانجو.jpeg';
 import fineTestImg from '@/assets/فاين تيست.jpg';
 import uwellImg from '@/assets/يو ويل.webp';
@@ -84,7 +84,7 @@ import selectPlusImg from '@/assets/سيليكت بلس.webp';
 import glucoDoctorImg from '@/assets/جلوكودكتور.webp';
 import oneCoolPlusImg from '@/assets/جهاز-سكر-أون-كول-بلاس-On-Call-Plus.webp';
 import smartImg from '@/assets/سمارت.jfif';
-import activeImg from '@/assets/اكتيف.jpg';
+import activeImg from '@/assets/ثري اتشيك.webp';
 
 
 import { Phone, MessageCircle, Heart, Stethoscope, Package } from 'lucide-react';
@@ -150,7 +150,7 @@ const MedicalSupplies = () => {
   const sugarDevices = [
     { name: 'رايت تيست', image: rightTestImg },
     { name: 'كنتور بلاس', image: contourPlusImg },
-    { name: 'ثري اتشيك', image: threeHCheckImg },
+    // { name: 'ثري اتشيك', image: threeHCheckImg },
     { name: 'تانجو', image: tangoImg },
     { name: 'فاين تيست', image: fineTestImg },
     { name: 'يو ويل', image: uwellImg },
