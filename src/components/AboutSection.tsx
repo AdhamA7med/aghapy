@@ -1,3 +1,7 @@
+import teamImage from '../assets/team.jpg'; // تأكد من المسار حسب مكان الملف الحالي
+
+
+
 
 import { Heart, Stethoscope, Cross } from 'lucide-react';
 
@@ -80,10 +84,11 @@ const AboutSection = () => {
               {/* Main Image Container - Medical team */}
               <div className="relative rounded-3xl overflow-hidden shadow-2xl">
                 <img 
-                  src="https://images.unsplash.com/photo-1559757260-a16a96265af8?auto=format&fit=crop&w=800&q=80"
-                  alt="فريق طبي متخصص كامل"
-                  className="w-full h-96 object-cover"
-                />
+  src={teamImage}
+  alt="فريق طبي متخصص كامل"
+  className="w-full h-96 object-cover"
+/>
+
                 <div className="absolute inset-0 bg-gradient-to-t from-medical-blue/20 to-transparent"></div>
               </div>
 
