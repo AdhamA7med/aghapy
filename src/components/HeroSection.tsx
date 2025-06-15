@@ -66,7 +66,7 @@ const HeroSection = () => {
             </button>
             
             <a 
-              href="https://wa.me/201211112471"
+              href="https://wa.me/201095113838"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 hover-lift flex items-center gap-2"
