@@ -15,7 +15,7 @@ const FloatingPhoneButton = () => {
 
   return (
     <a
-      href="tel:01211112471"
+      href="tel:01095113838"
       className="fixed bottom-20 right-4 sm:bottom-24 sm:right-5 md:bottom-28 md:right-6 w-12 h-12 sm:w-14 sm:h-14 bg-medical-blue hover:bg-medical-teal text-white rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 z-40 animate-bounce hover:animate-none touch-target"
       title="اتصل بنا الآن"
       aria-label="اتصل بنا الآن"
