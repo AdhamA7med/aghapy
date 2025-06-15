@@ -42,7 +42,7 @@ const ServicesSection = () => {
         "بيئة عمل مميزة",
         "تطوير مهني مستمر"
       ],
-      whatsapp: "01276226680",
+      whatsapp: "01276475528",
       color: "medical-green",
       link: "/nursing-jobs"
     }
