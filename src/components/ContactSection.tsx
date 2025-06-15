@@ -46,14 +46,14 @@ const ContactSection = () => {
                     <div className="flex-1 min-w-0">
                       <p className="text-xs sm:text-sm text-gray-600 mb-1">هاتف / واتساب</p>
                       <a 
-                        href="tel:01211112471"
+                        href="tel:01095113838"
                         className="text-lg sm:text-xl lg:text-2xl font-bold text-medical-blue hover:text-medical-teal transition-colors block"
                       >
-                        01211112471
+                        01095113838
                       </a>
                     </div>
                     <a 
-                      href="tel:01211112471"
+                      href="tel:01095113838"
                       className="w-full sm:w-auto bg-medical-blue text-white hover:bg-medical-teal transition-colors px-4 py-2 sm:px-6 sm:py-3 rounded-lg font-medium text-sm sm:text-base flex items-center justify-center gap-2"
                     >
                       اتصل
@@ -69,10 +69,10 @@ const ContactSection = () => {
                     </div>
                     <div className="flex-1 min-w-0">
                       <p className="text-xs sm:text-sm text-gray-600 mb-1">واتساب</p>
-                      <p className="text-lg sm:text-xl lg:text-2xl font-bold text-green-600">01211112471</p>
+                      <p className="text-lg sm:text-xl lg:text-2xl font-bold text-green-600">01095113838</p>
                     </div>
                     <a 
-                      href="https://wa.me/201211112471"
+                      href="https://wa.me/201095113838"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="w-full sm:w-auto bg-green-500 text-white hover:bg-green-600 transition-colors px-4 py-2 sm:px-6 sm:py-3 rounded-lg font-medium text-sm sm:text-base flex items-center justify-center gap-2"
@@ -135,7 +135,7 @@ const ContactSection = () => {
                 <h4 className="text-lg sm:text-xl font-bold text-gray-800 mb-4 sm:mb-6 text-center">خدمات سريعة</h4>
                 <div className="space-y-3 sm:space-y-4">
                   <button 
-                    onClick={() => window.open('https://wa.me/201211112471?text=أريد استشارة مجانية', '_blank')}
+                    onClick={() => window.open('https://wa.me/201095113838?text=أريد استشارة مجانية', '_blank')}
                     className="w-full bg-medical-blue/10 hover:bg-medical-blue/20 text-medical-blue font-semibold px-4 py-3 sm:px-6 sm:py-4 rounded-lg transition-colors flex items-center justify-center gap-2 text-sm sm:text-base"
                   >
                     <Heart className="w-4 h-4 sm:w-5 sm:h-5" />
@@ -143,7 +143,7 @@ const ContactSection = () => {
                   </button>
                   
                   <button 
-                    onClick={() => window.open('https://wa.me/201211112471?text=أريد حجز موعد', '_blank')}
+                    onClick={() => window.open('https://wa.me/201095113838?text=أريد حجز موعد', '_blank')}
                     className="w-full bg-medical-teal/10 hover:bg-medical-teal/20 text-medical-teal font-semibold px-4 py-3 sm:px-6 sm:py-4 rounded-lg transition-colors flex items-center justify-center gap-2 text-sm sm:text-base"
                   >
                     <Stethoscope className="w-4 h-4 sm:w-5 sm:h-5" />
@@ -151,7 +151,7 @@ const ContactSection = () => {
                   </button>
                   
                   <button 
-                    onClick={() => window.open('https://wa.me/201211112471?text=أريد معلومات عن الأسعار', '_blank')}
+                    onClick={() => window.open('https://wa.me/201095113838?text=أريد معلومات عن الأسعار', '_blank')}
                     className="w-full bg-medical-green/10 hover:bg-medical-green/20 text-medical-green font-semibold px-4 py-3 sm:px-6 sm:py-4 rounded-lg transition-colors flex items-center justify-center gap-2 text-sm sm:text-base"
                   >
                     <Cross className="w-4 h-4 sm:w-5 sm:h-5" />
