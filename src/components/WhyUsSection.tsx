@@ -129,7 +129,7 @@ const WhyUsSection = () => {
                 <p className="text-gray-600">خدمة متاحة</p>
               </div>
               <div className="text-center">
-                <div className="text-4xl font-bold text-medical-blue mb-2">5+</div>
+                <div className="text-4xl font-bold text-medical-blue mb-2">10+</div>
                 <p className="text-gray-600">سنوات خبرة</p>
               </div>
             </div>
@@ -145,7 +145,7 @@ const WhyUsSection = () => {
                   <Heart className="w-6 h-6 text-white" />
                 </div>
                 <div className="text-right">
-                  <p className="font-semibold text-gray-800">أسرة محمد أحمد</p>
+                  <p className="font-semibold text-gray-800">ابونا القس شنوده</p>
                   <p className="text-sm text-gray-600">عميل راضٍ</p>
                 </div>
               </div>
