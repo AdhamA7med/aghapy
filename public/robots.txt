@@ -1,14 +1,41 @@
-User-agent: Googlebot
+
+# Robots.txt for https://aghapy-nursing.com
+
+User-agent: *
 Allow: /
 
+# Priority crawling for main pages
+Allow: /medical-services
+Allow: /medical-supplies  
+Allow: /nursing-jobs
+
+# Sitemap location
+Sitemap: https://aghapy-nursing.com/sitemap.xml
+
+# Crawl delay (optional - helps with server load)
+Crawl-delay: 1
+
+# Specific bot instructions
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
 User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: facebookexternalhit
 Allow: /
 
 User-agent: Twitterbot
 Allow: /
 
-User-agent: facebookexternalhit
-Allow: /
+# Block common bot spam
+User-agent: AhrefsBot
+Disallow: /
 
-User-agent: *
-Allow: /
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /

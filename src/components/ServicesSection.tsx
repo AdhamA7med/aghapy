@@ -26,7 +26,7 @@ const ServicesSection = () => {
         "خدمة تحاليل منزلية",
         "رسم قلب منزلي",
         "زيارات منزلية سريعة",
-        "تمريض ومساعدين تمريض في البيت وقت ما تحب"
+        "تمريض ومساعدين تمريض في البيت وقt ما تحب"
       ],
       whatsapp: "01211112471",
       color: "medical-teal",
@@ -47,6 +47,10 @@ const ServicesSection = () => {
       link: "/nursing-jobs"
     }
   ];
+
+  const handleLinkClick = () => {
+    window.scrollTo(0, 0);
+  };
 
   return (
     <section id="services" className="py-20 bg-white">
@@ -106,6 +110,7 @@ const ServicesSection = () => {
                     {service.link && (
                       <Link 
                         to={service.link}
+                        onClick={handleLinkClick}
                         className={`w-full bg-${service.color}/10 hover:bg-${service.color}/20 text-${service.color} font-semibold py-3 px-6 rounded-full transition-all duration-300 block text-center`}
                       >
                         {service.title === "انضم لفريق العمل" ? "تعرف على الأوراق المطلوبة" : 

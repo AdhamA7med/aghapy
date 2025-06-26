@@ -1,0 +1,26 @@
+
+{
+  "name": "شركة أغابي للتمريض المنزلي",
+  "short_name": "أغابي تمريض",
+  "description": "أفضل خدمات التمريض المنزلي والرعاية الطبية المنزلية في القاهرة",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#37BDF8",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/apple-touch-icon.png", 
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ],
+  "categories": ["medical", "health", "business"],
+  "lang": "ar",
+  "dir": "rtl"
+}
